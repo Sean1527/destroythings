@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0",
+  "files": [],
+  "subMetas": {
+    "99380": {
+      "importer": "gltf-material",
+      "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@99380",
+      "displayName": "",
+      "id": "99380",
+      "name": "Material.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fe6ae": {
+      "importer": "gltf-mesh",
+      "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@fe6ae",
+      "displayName": "",
+      "id": "fe6ae",
+      "name": "Cone.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "48b02": {
+      "importer": "gltf-embeded-image",
+      "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@48b02",
+      "displayName": "",
+      "id": "48b02",
+      "name": "base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7d6ab": {
+      "importer": "texture",
+      "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@7d6ab",
+      "displayName": "",
+      "id": "7d6ab",
+      "name": "base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@48b02"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b4049": {
+      "importer": "gltf-scene",
+      "uuid": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@b4049",
+      "displayName": "",
+      "id": "b4049",
+      "name": "Cone.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "base_color_texture",
+        "uri": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@48b02"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "3bbb26ca-9a5c-4daf-80b4-594347f154e0@b4049",
+    "assetFinder": {
+      "meshes": [
+        "3bbb26ca-9a5c-4daf-80b4-594347f154e0@fe6ae"
+      ],
+      "skeletons": [],
+      "textures": [
+        "3bbb26ca-9a5c-4daf-80b4-594347f154e0@7d6ab"
+      ],
+      "materials": [
+        "3bbb26ca-9a5c-4daf-80b4-594347f154e0@99380"
+      ],
+      "scenes": [
+        "3bbb26ca-9a5c-4daf-80b4-594347f154e0@b4049"
+      ]
+    }
+  }
+}

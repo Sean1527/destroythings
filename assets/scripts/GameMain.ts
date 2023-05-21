@@ -1,9 +1,11 @@
 import { _decorator, Component, director, Node } from 'cc';
+import { UserData } from './UserData/UserData';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameMain')
 export class GameMain extends Component {
     public static instance:GameMain = null;
+    public m_login_data = {username :"test"};
     public static GetInstance()
     {
         return GameMain.instance;
@@ -11,21 +13,24 @@ export class GameMain extends Component {
     start() {
         GameMain.instance = this;
         director.addPersistRootNode(this.node);
-        director.loadScene("main", this.OnSceneLaunched);
+        this.LoadMain();
+        
+        UserData.GetInstance().Init();
     }
 
-    update(deltaTime: number) {
+    update(deltaTime: number) 
+    {
         
     }
 
     public LoadLevel()
     {
-        director.loadScene("level", this.OnSceneLaunched);
+        director.loadScene("Level", this.OnSceneLaunched);
     }
 
     public LoadMain()
     {
-        director.loadScene("main", this.OnSceneLaunched);
+        director.loadScene("Main", this.OnSceneLaunched);
     }
 
     public OnSceneLaunched()
