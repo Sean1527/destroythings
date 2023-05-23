@@ -16,9 +16,6 @@
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 5
       }
     ],
     "_active": true,
@@ -53,103 +50,9 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 7
-    },
-    "_id": "8b8009cc-eb91-4feb-acbd-7cb45b7136d6"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "Main Light",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 3
-      }
-    ],
-    "_prefab": null,
-    "_lpos": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_lrot": {
-      "__type__": "cc.Quat",
-      "x": -0.06397656665577071,
-      "y": -0.44608233363525845,
-      "z": -0.8239028751062036,
-      "w": -0.3436591377065261
-    },
-    "_lscale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_mobility": 0,
-    "_layer": 1073741824,
-    "_euler": {
-      "__type__": "cc.Vec3",
-      "x": -117.894,
-      "y": -194.909,
-      "z": 38.562
-    },
-    "_id": "c0y6F5f+pAvI805TdmxIjx"
-  },
-  {
-    "__type__": "cc.DirectionalLight",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "__prefab": null,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 250,
-      "b": 240,
-      "a": 255
-    },
-    "_useColorTemperature": false,
-    "_colorTemperature": 6550,
-    "_staticSettings": {
       "__id__": 4
     },
-    "_visibility": -325058561,
-    "_illuminanceHDR": 65000,
-    "_illuminance": 65000,
-    "_illuminanceLDR": 1.6927083333333335,
-    "_shadowEnabled": false,
-    "_shadowPcf": 0,
-    "_shadowBias": 0.00001,
-    "_shadowNormalBias": 0,
-    "_shadowSaturation": 1,
-    "_shadowDistance": 50,
-    "_shadowInvisibleOcclusionRange": 200,
-    "_csmLevel": 4,
-    "_csmLayerLambda": 0.75,
-    "_csmOptimizationMode": 2,
-    "_csmAdvancedOptions": false,
-    "_csmLayersTransition": false,
-    "_csmTransitionRange": 0.05,
-    "_shadowFixedArea": false,
-    "_shadowNear": 0.1,
-    "_shadowFar": 10,
-    "_shadowOrthoSize": 5,
-    "_id": "597uMYCbhEtJQc0ffJlcgA"
-  },
-  {
-    "__type__": "cc.StaticLightSettings",
-    "_baked": false,
-    "_editorOnly": false,
-    "_castShadow": false
+    "_id": "8b8009cc-eb91-4feb-acbd-7cb45b7136d6"
   },
   {
     "__type__": "cc.Node",
@@ -162,7 +65,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 6
+        "__id__": 3
       }
     ],
     "_prefab": null,
@@ -200,7 +103,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 5
+      "__id__": 2
     },
     "_enabled": true,
     "__prefab": null,
@@ -209,22 +112,22 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 8
+      "__id__": 5
     },
     "shadows": {
-      "__id__": 9
+      "__id__": 6
     },
     "_skybox": {
-      "__id__": 10
+      "__id__": 7
     },
     "fog": {
-      "__id__": 11
+      "__id__": 8
     },
     "octree": {
-      "__id__": 12
+      "__id__": 9
     },
     "lightProbeInfo": {
-      "__id__": 13
+      "__id__": 10
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
