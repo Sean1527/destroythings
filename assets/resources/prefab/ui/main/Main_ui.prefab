@@ -601,7 +601,10 @@
       "b": 124,
       "a": 255
     },
-    "_normalSprite": null,
+    "_normalSprite": {
+      "__uuid__": "c3317536-304a-4191-a773-70d25a44b39f@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
     "_hoverSprite": null,
     "_pressedSprite": null,
     "_disabledSprite": null,
@@ -1954,12 +1957,12 @@
     "__prefab": {
       "__id__": 88
     },
-    "_alignFlags": 8,
+    "_alignFlags": 12,
     "_target": null,
     "_left": 40,
     "_right": 0,
     "_top": 0,
-    "_bottom": 0,
+    "_bottom": 247.897,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
     "_isAbsLeft": true,
@@ -6665,7 +6668,6 @@
       "__id__": 0
     },
     "fileId": "e9z5Crp/VN6Y//3Xk2ATk7",
-    "instance": null,
     "targetOverrides": null
   }
 ]
