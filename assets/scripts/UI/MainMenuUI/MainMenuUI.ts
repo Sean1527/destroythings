@@ -4,17 +4,28 @@ const { ccclass, property } = _decorator;
 
 @ccclass('MainMenuUI')
 export class MainMenuUI extends Component {
+
+    onEnable () {
+        this.node.on(Node.EventType.TOUCH_END, this.OnStartGame, this);
+    }
+
+    onDisable () {
+        this.node.off(Node.EventType.TOUCH_END, this.OnStartGame, this);
+    }
+
     start() {
 
     }
 
-    update(deltaTime: number) {
-        
-    }
+
 
     public OnStartGame()
     {
         GameMain.GetInstance().LoadLevel();
+    }
+
+    update(deltaTime: number) {
+        
     }
 }
 

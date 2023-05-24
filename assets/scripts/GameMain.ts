@@ -35,5 +35,6 @@ export class GameMain extends Component {
 
     public OnSceneLaunched()
     {
+        console.log("OnSceneLaunched");
     }
 }
