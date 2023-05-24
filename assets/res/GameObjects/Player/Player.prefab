@@ -38,9 +38,9 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -12.704,
       "y": 0,
-      "z": 23.822
+      "z": 18.835
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -855,7 +855,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 29.396,
-      "z": 37.923
+      "z": 47.379
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -968,7 +968,9 @@
     },
     "LevelMenu": null,
     "m_Speed": 5,
-    "PlayerObj": null,
+    "PlayerObj": {
+      "__id__": 2
+    },
     "_id": ""
   },
   {
@@ -1015,7 +1017,6 @@
       "__id__": 0
     },
     "fileId": "f4/PaDGPNGzKjOVGKUVbnH",
-    "instance": null,
     "targetOverrides": [],
     "nestedPrefabInstanceRoots": [
       {

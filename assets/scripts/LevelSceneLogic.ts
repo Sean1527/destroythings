@@ -114,6 +114,10 @@ export class LevelSceneLogic extends Component {
         this.m_LoseUI.node.active = true;
         this.m_WinUI.node.active = false;
         //this.m_ReviveUI.node.active = false;
+        //到时自动回到主界面
+        setTimeout(() => {
+            GameMain.GetInstance().LoadMain();
+        }, 2500);
     }
 
     public WinLevel()
