@@ -38,9 +38,9 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -23.663,
       "y": 0,
-      "z": 0
+      "z": 7.918
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -343,6 +343,14 @@
       {
         "__uuid__": "639e7e18-6fa2-4da5-a44d-934865e4bae7",
         "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "a19355d8-af1a-4723-a9b6-e4064eb3586f",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "ddaf2762-be7b-43c9-9f07-0d98e405af28",
+        "__expectedType__": "cc.AnimationClip"
       }
     ],
     "_defaultClip": {
@@ -366,6 +374,9 @@
     "__prefab": {
       "__id__": 16
     },
+    "m_cur_value": 3,
+    "targetType": 1,
+    "eatingTime": 3,
     "_id": ""
   },
   {

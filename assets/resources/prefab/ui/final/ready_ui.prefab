@@ -43,13 +43,10 @@
       },
       {
         "__id__": 64
-      },
-      {
-        "__id__": 66
       }
     ],
     "_prefab": {
-      "__id__": 69
+      "__id__": 66
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -1080,7 +1077,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -26.380999999999972,
+      "y": -75.004,
       "z": 0
     },
     "_lrot": {
@@ -1365,81 +1362,14 @@
     "__prefab": {
       "__id__": 65
     },
-    "countDown": null,
+    "countDown": {
+      "__id__": 50
+    },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "7d3+AK5nlB94asYHNi9RJ0"
-  },
-  {
-    "__type__": "cc.Button",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 67
-    },
-    "clickEvents": [
-      {
-        "__id__": 68
-      }
-    ],
-    "_interactable": true,
-    "_transition": 0,
-    "_normalColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_hoverColor": {
-      "__type__": "cc.Color",
-      "r": 211,
-      "g": 211,
-      "b": 211,
-      "a": 255
-    },
-    "_pressedColor": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_disabledColor": {
-      "__type__": "cc.Color",
-      "r": 124,
-      "g": 124,
-      "b": 124,
-      "a": 255
-    },
-    "_normalSprite": null,
-    "_hoverSprite": null,
-    "_pressedSprite": null,
-    "_disabledSprite": null,
-    "_duration": 0.1,
-    "_zoomScale": 1.2,
-    "_target": null,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CompPrefabInfo",
-    "fileId": "cdpYetbnpGia3/DD6QNtdx"
-  },
-  {
-    "__type__": "cc.ClickEvent",
-    "target": {
-      "__id__": 1
-    },
-    "component": "",
-    "_componentId": "871c45t8nNDVJTsxIBDiIKf",
-    "handler": "OnReadyButtonClick",
-    "customEventData": ""
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1451,6 +1381,6 @@
     },
     "fileId": "e9z5Crp/VN6Y//3Xk2ATk7",
     "instance": null,
-    "targetOverrides": null
+    "targetOverrides": []
   }
 ]

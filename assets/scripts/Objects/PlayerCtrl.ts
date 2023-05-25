@@ -71,7 +71,8 @@ export class PlayerCtrl extends Component {
         {
             let value = target_ctrl.GetMyValue();
             this.AddValueAndGrow(value);
-            target_ctrl.DestroyMe(this);
+            target_ctrl.EatingMe();
+            // target_ctrl.EatingMe(this);
         }
     }
 
