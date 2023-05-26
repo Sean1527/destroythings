@@ -1,4 +1,4 @@
-import { _decorator, Component, Enum, Node ,Animation} from 'cc';
+import { _decorator, Component, Enum, Node ,Animation, BoxCollider} from 'cc';
 import { PlayerCtrl } from './PlayerCtrl';
 const { ccclass, property } = _decorator;
 
@@ -13,22 +13,18 @@ enum TargetType {
 export class TargetCtrl extends Component {
     
     @property()
-    private m_cur_value:number = 3.0;
+    private m_cur_value:number = 3.0;//奖励经验值
 
     @property({type:Enum(TargetType),displayName:"目标类型"})
     private targetType:TargetType = TargetType.Building;
     
     @property()
-    public eatingTime:number = 3; //当前对象被吞噬所需要的时间
-    
+    private myLevel:number = 3;//目标的等级
 
     start() {
 
     }
 
-    update(deltaTime: number) {
-        
-    }
 
     public GetMyValue():number
     {
@@ -36,37 +32,70 @@ export class TargetCtrl extends Component {
     }
 
 
-    /** 不同类型目标的吞噬表现 */
-    public EatingMe(){
-        // 保持碰撞期间持续播放以下反馈，当碰撞时间大于eatingTime时，播放吞噬效果
-        // 碰撞外围时时间减少慢，碰到中心时减少的块且满足要求的建筑飞离地面
-        let _targetAni = this.node.getComponent(Animation)
-        switch (this.targetType) {
+    /** 惊吓（触碰但不吞噬） */
+    public ScareTarget()
+    {   let _targetAni = this.node.getComponent(Animation)
+        console.log('targetscare')
+        switch (this.targetType)
+        {
             case TargetType.Building:
                 
                 break;
             case TargetType.Animal:
             
-                 break;
+                break;
             case TargetType.Buff:
             
                 break;
             case TargetType.People:
                 _targetAni.play('TankScareAnim'); 
-                setTimeout(() => {
-                    this.node.destroy();
-                }, this.eatingTime * 1000);
                 break;
         
             default:
-                break;
+                break;      
         }
     }
 
-    
+    /** 被吞噬 */
+    public EatTarget(player:Node,scriptPlayer:PlayerCtrl)
+    {   let _targetAni = this.node.getComponent(Animation)
+        this.node.getComponent(BoxCollider).enabled = false;
+        this.node.setParent(player);
+        console.log('targetdestroy')
+        switch (this.targetType)
+        {
+            case TargetType.Building:
+                
+                break;
+            case TargetType.Animal:
+            
+                break;
+            case TargetType.Buff:
+            
+                break;
+            case TargetType.People:
+                _targetAni.play('TankDestroyAnim'); 
+                break;
+        
+            default:
+                break;      
+        }
+        //调用销毁方法
+        this.DestroyMe(scriptPlayer);
+        //调用增加经验的方法
+        scriptPlayer.AddValueAndGrow(this.m_cur_value);
+    }
+
+
+    //目标销毁
     public DestroyMe(player:PlayerCtrl)
-    {
+    {    
         this.node.destroy();
+    }
+
+
+    update(deltaTime: number) {
+        
     }
 }
 
