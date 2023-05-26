@@ -40,7 +40,12 @@ export class constant {
         TARGET: 1 << 2,
         TRIGER: 1 << 3,
     }
-
+    //场景元素的状态
+    public static TARGETSTATE = {
+        IDLE: 1, //待机
+        SCARE:2, //惊吓
+        DIEING: 3,//被吞噬
+    }
 
     //事件枚举
     public static EVENT_TYPE = {

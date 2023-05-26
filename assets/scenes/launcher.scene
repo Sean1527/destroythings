@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "Launcher",
+    "_name": "launcher",
     "_objFlags": 0,
     "_native": "",
     "scene": {
@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "Launcher",
+    "_name": "launcher",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -52,7 +52,7 @@
     "_globals": {
       "__id__": 4
     },
-    "_id": "ce3ab3e5-d306-4b5d-8109-f73160365972"
+    "_id": "a311976e-588f-4f54-b76f-66c4d5219047"
   },
   {
     "__type__": "cc.Node",

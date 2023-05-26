@@ -1,5 +1,6 @@
 import { _decorator, Component, Enum, Node ,Animation, BoxCollider} from 'cc';
 import { PlayerCtrl } from './PlayerCtrl';
+import { constant } from '../framework/constant';
 const { ccclass, property } = _decorator;
 
 enum TargetType {
@@ -21,10 +22,21 @@ export class TargetCtrl extends Component {
     @property()
     private myLevel:number = 3;//目标的等级
 
+    private targetState:number = constant.TARGETSTATE.IDLE;
+
+
     start() {
-
+        let Collider = this.node.getComponent(BoxCollider);
+        Collider.on('onTriggerExit', this.onTriggerExit, this);
     }
-
+    
+    public init()
+    {
+        this.targetState = constant.TARGETSTATE.IDLE;
+        let _targetAni = this.node.getComponent(Animation)
+        _targetAni.play();
+        
+    }
 
     public GetMyValue():number
     {
@@ -34,8 +46,15 @@ export class TargetCtrl extends Component {
 
     /** 惊吓（触碰但不吞噬） */
     public ScareTarget()
-    {   let _targetAni = this.node.getComponent(Animation)
+    {   
         console.log('targetscare')
+        let _targetAni = this.node.getComponent(Animation)
+        //避免重复播放
+        if (this.targetState ===constant.TARGETSTATE.SCARE) {
+            return
+        }
+        this.targetState = constant.TARGETSTATE.SCARE;
+        
         switch (this.targetType)
         {
             case TargetType.Building:
@@ -58,9 +77,16 @@ export class TargetCtrl extends Component {
 
     /** 被吞噬 */
     public EatTarget(player:Node,scriptPlayer:PlayerCtrl)
-    {   let _targetAni = this.node.getComponent(Animation)
+    {   
+        if (this.targetState ===constant.TARGETSTATE.DIEING) {
+            return
+        }
+        this.targetState = constant.TARGETSTATE.DIEING;
+        
         this.node.getComponent(BoxCollider).enabled = false;
         this.node.setParent(player);
+        this.node.setPosition(0,0.2,0);
+        let _targetAni = this.node.getComponent(Animation);
         console.log('targetdestroy')
         switch (this.targetType)
         {
@@ -74,18 +100,26 @@ export class TargetCtrl extends Component {
             
                 break;
             case TargetType.People:
-                _targetAni.play('TankDestroyAnim'); 
+                _targetAni.crossFade('TankDestroyAnim'); 
                 break;
         
             default:
                 break;      
         }
-        //调用销毁方法
-        this.DestroyMe(scriptPlayer);
-        //调用增加经验的方法
-        scriptPlayer.AddValueAndGrow(this.m_cur_value);
+         
+        setTimeout(() => {
+            //调用销毁方法
+            this.DestroyMe(scriptPlayer);
+            //调用增加经验的方法
+            scriptPlayer.AddValueAndGrow(this.m_cur_value);
+        }, 800);
+      
     }
 
+    private onTriggerExit(){
+        this.init();
+        
+    }
 
     //目标销毁
     public DestroyMe(player:PlayerCtrl)

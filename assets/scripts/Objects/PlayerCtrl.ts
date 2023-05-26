@@ -35,7 +35,6 @@ export class PlayerCtrl extends Component {
         let Collider = this.node.getComponent(BoxCollider);
         // Collider.on('onTriggerEnter', this.onTriggerEnter, this);
         Collider.on('onTriggerStay', this.onTriggerStay, this);
-        Collider.on('onTriggerExit', this.onTriggerExit, this);
         this.m_PlayerData = UserData.GetInstance().GetPlayerData();
     }
 
@@ -91,12 +90,13 @@ export class PlayerCtrl extends Component {
         let curDistance = Math.sqrt(dx*dx + dz*dz);
         //计算吞噬距离
         let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
-        let targetRadius =ndTarget.scale.x * this.node.getComponent(BoxCollider).size.x;
+        let targetRadius =ndTarget.scale.x * ndTarget.getComponent(BoxCollider).size.x;
         let eatDistance = myRadius - targetRadius;
 
         let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
         
         // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
+      
         if (eatRatio >= 1) {
             target_ctrl.EatTarget(this.node,this)
         }else{
@@ -105,9 +105,6 @@ export class PlayerCtrl extends Component {
         }
     }
 
-    private onTriggerExit(){
-        
-    }
 
     private GetCurPhase():number
     {
