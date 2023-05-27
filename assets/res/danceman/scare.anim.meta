@@ -2,12 +2,12 @@
   "ver": "2.0.3",
   "importer": "animation-clip",
   "imported": true,
-  "uuid": "a19355d8-af1a-4723-a9b6-e4064eb3586f",
+  "uuid": "625e496e-810c-4e99-9376-e2bed5a4924d",
   "files": [
     ".cconb"
   ],
   "subMetas": {},
   "userData": {
-    "name": "TankDestroyAnim"
+    "name": "scare"
   }
 }

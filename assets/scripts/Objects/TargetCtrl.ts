@@ -73,7 +73,7 @@ export class TargetCtrl extends Component {
                 AudioMgr.inst.playOneShot("scaretree",0.6)
                 break;
             case TargetType.People:
-                _targetAni.play('TankScareAnim'); 
+                _targetAni.play('scare'); 
                 AudioMgr.inst.playOneShot("scarewoman",0.6)
                 break;
         
@@ -109,7 +109,7 @@ export class TargetCtrl extends Component {
                 AudioMgr.inst.playOneShot("dieTree",0.6)
                 break;
             case TargetType.People:
-                _targetAni.crossFade('TankDestroyAnim'); 
+                _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("diewoman",0.6)
                 break;
         
