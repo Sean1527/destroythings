@@ -1,13 +1,15 @@
 import { _decorator, Component, Enum, Node ,Animation, BoxCollider} from 'cc';
 import { PlayerCtrl } from './PlayerCtrl';
 import { constant } from '../framework/constant';
+import { AudioMgr } from '../framework/AudioMgr';
 const { ccclass, property } = _decorator;
 
 enum TargetType {
     Building = 0,
     People = 1,
     Animal = 2,
-    Buff = 3,
+    Tree = 3,
+    Buff = 4,
   };
 
 @ccclass('TargetCtrl')
@@ -35,6 +37,7 @@ export class TargetCtrl extends Component {
         this.targetState = constant.TARGETSTATE.IDLE;
         let _targetAni = this.node.getComponent(Animation)
         _targetAni.play();
+        AudioMgr.inst.stop();
         
     }
 
@@ -58,16 +61,20 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                
+                _targetAni.play('scare'); 
+                AudioMgr.inst.playOneShot("scarebuilding",0.6)
                 break;
             case TargetType.Animal:
-            
+                _targetAni.play('scare'); 
+                
                 break;
-            case TargetType.Buff:
-            
+            case TargetType.Tree:
+                _targetAni.play('scare'); 
+                AudioMgr.inst.playOneShot("scaretree",0.6)
                 break;
             case TargetType.People:
                 _targetAni.play('TankScareAnim'); 
+                AudioMgr.inst.playOneShot("scarewoman",0.6)
                 break;
         
             default:
@@ -91,16 +98,19 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                
+                _targetAni.crossFade('die'); 
+                AudioMgr.inst.playOneShot("dieBuilding",0.6)
                 break;
             case TargetType.Animal:
-            
+                _targetAni.crossFade('die'); 
                 break;
-            case TargetType.Buff:
-            
+            case TargetType.Tree:
+                _targetAni.crossFade('die'); 
+                AudioMgr.inst.playOneShot("dieTree",0.6)
                 break;
             case TargetType.People:
                 _targetAni.crossFade('TankDestroyAnim'); 
+                AudioMgr.inst.playOneShot("diewoman",0.6)
                 break;
         
             default:
