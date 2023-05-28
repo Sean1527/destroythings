@@ -47,7 +47,7 @@ export class GameMain extends Component {
 
     public OnSkillBuy_1(res: any) 
     {
-        console.log("OnSkillBuy_3");
+        console.log("OnSkillBuy_1");
         if (res.isEnded) {
             this.BuySkill(1);
         }
@@ -61,7 +61,7 @@ export class GameMain extends Component {
     }
     public OnSkillBuy_2(res: any) 
     {
-        console.log("OnSkillBuy_3");
+        console.log("OnSkillBuy_2");
         if (res.isEnded) {
             this.BuySkill(2);
         }

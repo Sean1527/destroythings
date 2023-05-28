@@ -99,7 +99,7 @@ export class TargetCtrl extends Component {
         {
             case TargetType.Building:
                 _targetAni.crossFade('die'); 
-                AudioMgr.inst.playOneShot("dieBuilding",0.6)
+                AudioMgr.inst.playOneShot("dieBuilding",0.4)
                 break;
             case TargetType.Animal:
                 _targetAni.crossFade('die'); 

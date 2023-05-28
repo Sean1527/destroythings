@@ -274,7 +274,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 7.821,
-      "y": 454.081,
+      "y": 406.712,
       "z": 0
     },
     "_lrot": {
@@ -313,7 +313,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 404,
+      "width": 132,
       "height": 193
     },
     "_anchorPoint": {
@@ -348,11 +348,11 @@
       "b": 247,
       "a": 255
     },
-    "_string": "游戏准备",
+    "_string": "准备",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 100,
-    "_fontSize": 100,
+    "_actualFontSize": 64,
+    "_fontSize": 64,
     "_fontFamily": "Arial",
     "_lineHeight": 150,
     "_overflow": 0,
@@ -1025,7 +1025,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 309.287,
+      "y": 298.091,
       "z": 0
     },
     "_lrot": {
@@ -1151,7 +1151,7 @@
       "b": 39,
       "a": 255
     },
-    "_string": "5",
+    "_string": "3",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 120,

@@ -3536,7 +3536,7 @@
       }
     ],
     "_interactable": true,
-    "_transition": 0,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -4946,7 +4946,7 @@
       }
     ],
     "_interactable": true,
-    "_transition": 0,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -6356,7 +6356,7 @@
       }
     ],
     "_interactable": true,
-    "_transition": 0,
+    "_transition": 3,
     "_normalColor": {
       "__type__": "cc.Color",
       "r": 255,
@@ -6927,6 +6927,7 @@
       "__id__": 0
     },
     "fileId": "e9z5Crp/VN6Y//3Xk2ATk7",
+    "instance": null,
     "targetOverrides": null
   }
 ]
