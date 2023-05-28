@@ -27,6 +27,22 @@ export class UserData {
 
     public Init()
     {
+        {
+            let Skill = new SkillData();
+            Skill.ID = 1;
+            this.m_SkillDatas.push(Skill);
+        }
+        {
+            let Skill = new SkillData();
+            Skill.ID = 2;
+            this.m_SkillDatas.push(Skill);
+        }
+        {
+            let Skill = new SkillData();
+            Skill.ID = 3;
+            this.m_SkillDatas.push(Skill);
+        }
+
         UserData.instance = this;
         let ud = this.GetData("player_data");
         if(ud == null)
@@ -82,6 +98,7 @@ export class UserData {
         this.m_PlayerData.Quests = [];
         this.m_PlayerData.Currency = 1000;
         this.m_PlayerData.StatusEffects = [];
+
     }
 
     public SetData(Key:string, Data:any)

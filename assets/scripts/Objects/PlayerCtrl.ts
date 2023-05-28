@@ -1,60 +1,37 @@
-import { _decorator, BoxCollider, Component, director, EventTouch, ITriggerEvent, Node, Vec3, view } from 'cc';
+import { _decorator, BoxCollider, Component, ITriggerEvent, Label, Node, Vec3 } from 'cc';
 import { TargetCtrl } from './TargetCtrl';
-import { PlayerData } from '../UserData/PlayerData';
-import { UserData } from '../UserData/UserData';
+import { LevelSceneLogic } from '../LevelSceneLogic';
 const { ccclass, property } = _decorator;
 
 @ccclass('PlayerCtrl')
 export class PlayerCtrl extends Component {
     
-    @property(Node)
-    LevelMenu: Node = null;
     @property
     m_Speed:number = 5.0; // you can adjust this value to set the speed of the node
 
     @property(Node)
     PlayerObj: Node = null;
 
+    @property(Label)
+    m_TextLabel: Label = null;
     
+    @property(LevelSceneLogic)
+    m_LevelSceneLogic:LevelSceneLogic = null
 
-    private m_cur_value:number = 0;
+    protected m_cur_value:number = 0;
 
-    private m_next_values:number[] = [10.0, 15.0, 20.0, 40,0];
+    protected m_next_values:number[] = [10.0, 15.0, 20.0, 40,0];
 
-    public m_PlayerData:PlayerData = null;
+    protected m_PlayerName:string = "";
 
-    private m_PressStarPoint:Vec3 = new Vec3(0,0,0);
-    private m_Direction:Vec3 = new Vec3(0,0,0);
+    protected m_Direction:Vec3 = new Vec3(0,0,0);
 
-    start () {
-        // register touch event
-        this.LevelMenu.on(Node.EventType.TOUCH_MOVE, this.OnTouchMove, this);
-        this.LevelMenu.on(Node.EventType.TOUCH_START, this.OnTouchStart, this);
-        this.LevelMenu.on(Node.EventType.TOUCH_END, this.OnTouchEnd, this);
 
+    start () 
+    {
         let Collider = this.node.getComponent(BoxCollider);
         // Collider.on('onTriggerEnter', this.onTriggerEnter, this);
         Collider.on('onTriggerStay', this.onTriggerStay, this);
-        this.m_PlayerData = UserData.GetInstance().GetPlayerData();
-    }
-
-    private OnTouchStart(event: EventTouch) 
-    {
-        this.m_PressStarPoint = new Vec3(event.getLocationX(), 0, event.getLocationY());
-    }
-
-    private OnTouchMove(event: EventTouch) 
-    {
-        let CurrentPressPoint = new Vec3(event.getLocationX(), 0, event.getLocationY());
-        Vec3.subtract(this.m_Direction, CurrentPressPoint, this.m_PressStarPoint);
-        Vec3.normalize(this.m_Direction, this.m_Direction);
-        this.m_Direction.z = -this.m_Direction.z
-        Vec3.multiplyScalar(this.m_Direction, this.m_Direction, this.m_Speed);
-    }
-
-    private OnTouchEnd(event: EventTouch) {
-
-        this.m_PressStarPoint = this.m_Direction = new Vec3(0,0,0);
         
     }
 
@@ -84,25 +61,29 @@ export class PlayerCtrl extends Component {
     {
         let ndTarget = event.otherCollider.node;
         let target_ctrl = ndTarget.getComponent(TargetCtrl);
-        //计算当前距离
-        let dx = this.node.position.x -ndTarget.position.x;
-        let dz = this.node.position.z -ndTarget.position.z;
-        let curDistance = Math.sqrt(dx*dx + dz*dz);
-        //计算吞噬距离
-        let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
-        let targetRadius =ndTarget.scale.x * ndTarget.getComponent(BoxCollider).size.x;
-        let eatDistance = myRadius - targetRadius;
+        if(target_ctrl != null)
+        {
+            //计算当前距离
+            let dx = this.node.position.x -ndTarget.position.x;
+            let dz = this.node.position.z -ndTarget.position.z;
+            let curDistance = Math.sqrt(dx*dx + dz*dz);
+            //计算吞噬距离
+            let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
+            let targetRadius =ndTarget.scale.x * ndTarget.getComponent(BoxCollider).size.x;
+            let eatDistance = myRadius - targetRadius;
 
-        let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
-        
-        // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
-      
-        if (eatRatio >= 1) {
-            target_ctrl.EatTarget(this.node,this)
-        }else{
-            //如果需要根据吞噬程度来控制动画的播放程度可以再继续细分情况
-            target_ctrl.ScareTarget();
+            let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
+
+            // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
+
+            if (eatRatio >= 1) {
+                target_ctrl.EatTarget(this.node,this)
+            }else{
+                //如果需要根据吞噬程度来控制动画的播放程度可以再继续细分情况
+                target_ctrl.ScareTarget();
+            }
         }
+        
     }
 
 
@@ -120,7 +101,7 @@ export class PlayerCtrl extends Component {
 
     public AddValueAndGrow(value:number)
     {
-        this.m_PlayerData.ExperiencePoints += value;
+        //this.m_PlayerData.ExperiencePoints += value;
         let phase_cur = this.GetCurPhase();
         this.m_cur_value += value;
         let phase_next = this.GetCurPhase();
@@ -132,10 +113,34 @@ export class PlayerCtrl extends Component {
 
     private Upgrade(phase:number)
     {
+        console.log("Upgrade");
         this.PlayerObj.setScale(new Vec3(1.0 + phase * 0.2, 1.0 + phase * 0.2, 1.0 + phase * 0.2))
         this.node.setScale(new Vec3(1.0 + phase * 0.2, 1.0 + phase * 0.2, 1.0 + phase * 0.2))
-        this.m_PlayerData.Level += phase;
+        //this.m_PlayerData.Level += phase;
     }
     
+    public SetName(Name:string)
+    {
+        this.m_PlayerName = Name;
+    }
 
+    public SetValue(Value:number)
+    {
+        let phase_cur = this.GetCurPhase();
+        this.m_cur_value = Value;
+        let phase_next = this.GetCurPhase();
+        if(phase_next != phase_cur)
+        {
+            this.Upgrade(phase_next);
+        }
+    }
+    public GetName():string
+    {
+        return this.m_PlayerName
+    }
+
+    public GetValue():number
+    {
+        return this.m_cur_value
+    }
 }

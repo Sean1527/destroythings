@@ -2211,7 +2211,7 @@
     },
     "component": "",
     "_componentId": "020c6WwJQtJcY9STHEJbYeA",
-    "handler": "OnWin2ButtonClick",
+    "handler": "OnWinDoubleReward",
     "customEventData": ""
   },
   {
@@ -2558,7 +2558,7 @@
     },
     "component": "",
     "_componentId": "020c6WwJQtJcY9STHEJbYeA",
-    "handler": "OnWinButtonClick",
+    "handler": "OnWinBack",
     "customEventData": ""
   },
   {
@@ -2894,6 +2894,6 @@
     },
     "fileId": "e9z5Crp/VN6Y//3Xk2ATk7",
     "instance": null,
-    "targetOverrides": null
+    "targetOverrides": []
   }
 ]

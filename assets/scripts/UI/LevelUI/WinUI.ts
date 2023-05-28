@@ -1,4 +1,6 @@
 import { _decorator, Component, Node } from 'cc';
+import { GameMain } from '../../GameMain';
+import { ttPlatform } from '../../Platform/ttPlatform';
 const { ccclass, property } = _decorator;
 
 @ccclass('WinUI')
@@ -11,14 +13,14 @@ export class WinUI extends Component {
         
     }
 
-    public OnWinButtonClick()
+    public OnWinBack()
     {
-        
+        GameMain.GetInstance().LoadMain();
     }
 
-    public OnWin2ButtonClick()
+    public OnWinDoubleReward()
     {
-        
+        ttPlatform.ShowVideoAD(ttPlatform.AD_VIDEO_TYPE.AD_VIDEO_TYPE_DOUBLEREWARD);
     }
 }
 
