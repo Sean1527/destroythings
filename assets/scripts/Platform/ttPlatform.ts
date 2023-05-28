@@ -12,8 +12,11 @@ export class ttPlatform
     }
 
     public static m_AD_VIDEO_TYPE:any = ttPlatform.AD_VIDEO_TYPE.AD_VIDEO_TYPE_DOUBLEREWARD;
-
     public static m_VideoADInstance:any = null;
+
+    public static record_stop = true
+    public static record_path = ""
+    public static AD_interstitial:any = null; //插屏广告
 
     public static Login()
     {
@@ -38,7 +41,7 @@ export class ttPlatform
           });
     }
 
-
+//--------------------------------------------------------视频激励AD---------------------------------------------------
     // VideoIDStr = 1k9ri0lfl7o31garcb
     public static CreateVideoAD(VideoIDStr)
     {
@@ -102,5 +105,184 @@ export class ttPlatform
         //        });
         //}
         
+    }
+
+//--------------------------------------------------------插屏AD---------------------------------------------------
+     /**插屏广告 */
+     public static showAD_Interstitial () 
+     {
+         console.log("showAD_Interstitial");
+         if(ttPlatform.AD_interstitial != null)
+         {
+            ttPlatform.AD_interstitial.destroy()
+         }
+         ttPlatform.AD_interstitial = tt.createInterstitialAd({
+             adUnitId: "962dd6jaegfh22739h",
+           });
+           ttPlatform.AD_interstitial.onClose(() => {
+             console.log("Interstitial destroy");
+             ttPlatform.AD_interstitial.destroy()})
+             ttPlatform.AD_interstitial.load()
+             .then(() => {
+                ttPlatform.AD_interstitial.show().then(() => {
+                 console.log("插屏广告展示成功");
+               });
+             })
+             .catch((err) => {
+               console.log(err);
+               console.log("插屏广告展示fail");
+               ttPlatform.AD_interstitial.destroy()
+             });
+     }
+ 
+    //--------------------------------------------------------录屏分享---------------------------------------------------
+
+    /**开始录屏*/
+       public static startRecord(){
+        tt.getSystemInfo({
+            success(res) {
+              const screenWidth = res.screenWidth;
+              const screenHeight = res.screenHeight;
+              const recorder = tt.getGameRecorderManager();
+              var maskInfo = recorder.getMark();
+              var x = (screenWidth - maskInfo.markWidth) / 30;
+              var y = (screenHeight - maskInfo.markHeight) / 1.5;
+          
+              recorder.onStart((res) => {
+                console.log("录屏开始");
+                ttPlatform.record_stop = false
+                // do something; 监听到录屏开始事件后的反馈
+              });
+
+              recorder.onStop((res) => {
+                console.log("录屏结束");
+                ttPlatform.record_path = res.videoPath
+                ttPlatform.record_stop = true
+                console.log(res.videoPath);
+                // do something;
+                });
+
+              //添加水印并且居中处理
+              recorder.start({
+                duration: 300,
+                isMarkOpen: true,
+                locLeft: x,
+                locTop: y,
+              });
+            },
+          });   
+    }
+
+    /** 结束录屏*/
+    public static stoptRecord(){
+        const recorder = tt.getGameRecorderManager();
+        recorder.stop();    
+    }
+
+    /** 分享录屏*/
+    public  static recordShare(){
+        
+        console.log("recordShare !!!");
+
+        const recorder = tt.getGameRecorderManager();
+
+        if(ttPlatform.record_stop == true)
+        {
+            tt.shareAppMessage({
+                title: "镖在手，跟我走",
+                channel: "video",
+                extra: {
+                videoPath: ttPlatform.record_path, //录屏后得到的文件地址
+                withVideoId: true,
+                },
+                success(res) {
+                    console.log("分享成功");
+                    tt.showToast({
+                        title: "分享成功",
+                        duration: 2000,
+                        success(res) {
+                          console.log(`${res}`);
+                        },
+                        fail(res) {
+                          console.log(`showToast调用失败`);
+                        },
+                      });
+                    // tt.showModal({
+                    //     title: "分享成功",
+                    //     content: JSON.stringify(res),
+                    // });
+                },
+                fail(e) {
+                    console.log("分享失败");
+                    tt.showToast({
+                        title: "分享失败",
+                        duration: 1000,
+                        success(res) {
+                          console.log(`${res}`);
+                        },
+                        fail(res) {
+                          console.log(`showToast调用失败`);
+                        },
+                      });
+                    // tt.showModal({
+                    //     title: "分享失败",
+                    //     content: JSON.stringify(e),
+                    // });
+                },
+            });
+        }
+        else
+        {
+            recorder.onStop((res) => {
+                console.log("录屏结束并分享");
+                console.log(res.videoPath);
+                tt.shareAppMessage({
+                    title: "镖在手，跟我走",
+                    channel: "video",
+                    extra: {
+                    videoPath: res.videoPath, //录屏后得到的文件地址
+                    withVideoId: true,
+                    },
+                    success(res) {
+                        console.log("分享成功");
+                        tt.showToast({
+                            title: "分享成功",
+                            duration: 2000,
+                            success(res) {
+                              console.log(`${res}`);
+                            },
+                            fail(res) {
+                              console.log(`showToast调用失败`);
+                            },
+                          });
+                        // tt.showModal({
+                        //     title: "分享成功",
+                        //     content: JSON.stringify(res),
+                         //  });
+                    },
+                    fail(e) {
+                        console.log("分享失败");
+                        tt.showToast({
+                            title: "分享失败",
+                            duration: 1000,
+                            success(res) {
+                              console.log(`${res}`);
+                            },
+                            fail(res) {
+                              console.log(`showToast调用失败`);
+                            },
+                          });
+                        // tt.showModal({
+                        //     title: "分享失败",
+                        //     content: JSON.stringify(e),
+                        // });
+                    },
+                });
+            });
+
+            recorder.stop();
+        }
+        
+            
     }
 }
