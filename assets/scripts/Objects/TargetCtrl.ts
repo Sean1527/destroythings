@@ -36,7 +36,7 @@ export class TargetCtrl extends Component {
     {
         this.targetState = constant.TARGETSTATE.IDLE;
         let _targetAni = this.node.getComponent(Animation)
-        _targetAni.play();
+        // _targetAni.play();
         AudioMgr.inst.stop();
         
     }
@@ -61,19 +61,19 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                _targetAni.play('scare'); 
+                // _targetAni.play('scare'); 
                 AudioMgr.inst.playOneShot("scarebuilding",0.6)
                 break;
             case TargetType.Animal:
-                _targetAni.play('scare'); 
+                // _targetAni.play('scare'); 
                 
                 break;
             case TargetType.Tree:
-                _targetAni.play('scare'); 
+                // _targetAni.play('scare'); 
                 AudioMgr.inst.playOneShot("scaretree",0.6)
                 break;
             case TargetType.People:
-                _targetAni.play('scare'); 
+                // _targetAni.play('scare'); 
                 AudioMgr.inst.playOneShot("scarewoman",0.6)
                 break;
         
@@ -98,18 +98,18 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                _targetAni.crossFade('die'); 
+                // _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("dieBuilding",0.4)
                 break;
             case TargetType.Animal:
-                _targetAni.crossFade('die'); 
+                // _targetAni.crossFade('die'); 
                 break;
             case TargetType.Tree:
-                _targetAni.crossFade('die'); 
+                // _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("dieTree",0.6)
                 break;
             case TargetType.People:
-                _targetAni.crossFade('die'); 
+                // _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("diewoman",0.6)
                 break;
         

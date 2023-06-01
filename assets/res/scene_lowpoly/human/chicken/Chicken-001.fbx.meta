@@ -2,12 +2,12 @@
   "ver": "2.3.4",
   "importer": "fbx",
   "imported": true,
-  "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5",
+  "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb",
   "files": [],
   "subMetas": {
     "3817c": {
       "importer": "gltf-mesh",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@3817c",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@3817c",
       "displayName": "",
       "id": "3817c",
       "name": "Chicken.mesh",
@@ -24,7 +24,7 @@
     },
     "438fe": {
       "importer": "gltf-skeleton",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@438fe",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@438fe",
       "displayName": "",
       "id": "438fe",
       "name": "UnnamedSkeleton.skeleton",
@@ -41,7 +41,7 @@
     },
     "f7545": {
       "importer": "gltf-embeded-image",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@f7545",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@f7545",
       "displayName": "",
       "id": "f7545",
       "name": "Texture.012.image",
@@ -58,7 +58,7 @@
     },
     "7a15f": {
       "importer": "texture",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@7a15f",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@7a15f",
       "displayName": "",
       "id": "7a15f",
       "name": "Texture.012.texture",
@@ -70,7 +70,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Gent_A.png"
+        "imageUuidOrDatabaseUri": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Ninja_A.png"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -81,7 +81,7 @@
     },
     "710dd": {
       "importer": "gltf-material",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@710dd",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@710dd",
       "displayName": "",
       "id": "710dd",
       "name": "Material.013.material",
@@ -97,10 +97,10 @@
     },
     "25d52": {
       "importer": "gltf-scene",
-      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52",
+      "uuid": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@25d52",
       "displayName": "",
       "id": "25d52",
-      "name": "Chicken.prefab",
+      "name": "Chicken-001.prefab",
       "userData": {
         "gltfIndex": 0
       },
@@ -116,29 +116,29 @@
     "imageMetas": [
       {
         "name": "Texture.012",
-        "remap": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Gent_A.png",
-        "uri": "1380e419-4a67-436e-9c1c-7c1e889e7da5@f7545"
+        "remap": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Ninja_A.png",
+        "uri": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@f7545"
       }
     ],
     "fbx": {
       "smartMaterialEnabled": true
     },
-    "redirect": "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52",
+    "redirect": "8f3ffcf8-2595-49ee-b313-82b85fd046eb@25d52",
     "assetFinder": {
       "meshes": [
-        "1380e419-4a67-436e-9c1c-7c1e889e7da5@3817c"
+        "8f3ffcf8-2595-49ee-b313-82b85fd046eb@3817c"
       ],
       "skeletons": [
-        "1380e419-4a67-436e-9c1c-7c1e889e7da5@438fe"
+        "8f3ffcf8-2595-49ee-b313-82b85fd046eb@438fe"
       ],
       "textures": [
-        "1380e419-4a67-436e-9c1c-7c1e889e7da5@7a15f"
+        "8f3ffcf8-2595-49ee-b313-82b85fd046eb@7a15f"
       ],
       "materials": [
-        "1380e419-4a67-436e-9c1c-7c1e889e7da5@710dd"
+        "8f3ffcf8-2595-49ee-b313-82b85fd046eb@710dd"
       ],
       "scenes": [
-        "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52"
+        "8f3ffcf8-2595-49ee-b313-82b85fd046eb@25d52"
       ]
     }
   }
