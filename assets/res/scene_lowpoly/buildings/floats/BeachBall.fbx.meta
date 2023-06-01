@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb",
+  "files": [],
+  "subMetas": {
+    "8d59e": {
+      "importer": "gltf-mesh",
+      "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@8d59e",
+      "displayName": "",
+      "id": "8d59e",
+      "name": "Beachballs.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7c6ce": {
+      "importer": "gltf-embeded-image",
+      "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@7c6ce",
+      "displayName": "",
+      "id": "7c6ce",
+      "name": "BeachBallGeo_initialShadingGroup_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "09bab": {
+      "importer": "texture",
+      "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@09bab",
+      "displayName": "",
+      "id": "09bab",
+      "name": "BeachBallGeo_initialShadingGroup_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@7c6ce"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ba3ea": {
+      "importer": "gltf-material",
+      "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@ba3ea",
+      "displayName": "",
+      "id": "ba3ea",
+      "name": "BeachballMaterial.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bd5f1": {
+      "importer": "gltf-scene",
+      "uuid": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@bd5f1",
+      "displayName": "",
+      "id": "bd5f1",
+      "name": "BeachBall.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "BeachBallGeo_initialShadingGroup_BaseColor.png",
+        "uri": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@7c6ce"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "22f42eb1-860f-4f71-9ccc-75bafad06bdb@bd5f1",
+    "assetFinder": {
+      "meshes": [
+        "22f42eb1-860f-4f71-9ccc-75bafad06bdb@8d59e"
+      ],
+      "skeletons": [],
+      "textures": [
+        "22f42eb1-860f-4f71-9ccc-75bafad06bdb@09bab"
+      ],
+      "materials": [
+        "22f42eb1-860f-4f71-9ccc-75bafad06bdb@ba3ea"
+      ],
+      "scenes": [
+        "22f42eb1-860f-4f71-9ccc-75bafad06bdb@bd5f1"
+      ]
+    }
+  }
+}

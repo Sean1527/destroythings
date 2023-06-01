@@ -1,0 +1,95 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "5f76d4b9-1bc8-414d-983f-85156775394b",
+  "files": [],
+  "subMetas": {
+    "7b3f6": {
+      "importer": "gltf-mesh",
+      "uuid": "5f76d4b9-1bc8-414d-983f-85156775394b@7b3f6",
+      "displayName": "",
+      "id": "7b3f6",
+      "name": "formation_rock_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4014": {
+      "importer": "gltf-material",
+      "uuid": "5f76d4b9-1bc8-414d-983f-85156775394b@e4014",
+      "displayName": "",
+      "id": "e4014",
+      "name": "wood.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5f31f": {
+      "importer": "gltf-material",
+      "uuid": "5f76d4b9-1bc8-414d-983f-85156775394b@5f31f",
+      "displayName": "",
+      "id": "5f31f",
+      "name": "sand.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8c440": {
+      "importer": "gltf-scene",
+      "uuid": "5f76d4b9-1bc8-414d-983f-85156775394b@8c440",
+      "displayName": "",
+      "id": "8c440",
+      "name": "formation_rock.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "5f76d4b9-1bc8-414d-983f-85156775394b@8c440",
+    "assetFinder": {
+      "meshes": [
+        "5f76d4b9-1bc8-414d-983f-85156775394b@7b3f6"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "5f76d4b9-1bc8-414d-983f-85156775394b@e4014",
+        "5f76d4b9-1bc8-414d-983f-85156775394b@5f31f"
+      ],
+      "scenes": [
+        "5f76d4b9-1bc8-414d-983f-85156775394b@8c440"
+      ]
+    }
+  }
+}

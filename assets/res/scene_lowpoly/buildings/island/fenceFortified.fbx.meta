@@ -1,0 +1,95 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "9589d73e-75b4-4f50-a991-908054a4edcc",
+  "files": [],
+  "subMetas": {
+    "88957": {
+      "importer": "gltf-scene",
+      "uuid": "9589d73e-75b4-4f50-a991-908054a4edcc@88957",
+      "displayName": "",
+      "id": "88957",
+      "name": "fenceFortified.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6fb56": {
+      "importer": "gltf-mesh",
+      "uuid": "9589d73e-75b4-4f50-a991-908054a4edcc@6fb56",
+      "displayName": "",
+      "id": "6fb56",
+      "name": "fenceFortified_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4014": {
+      "importer": "gltf-material",
+      "uuid": "9589d73e-75b4-4f50-a991-908054a4edcc@e4014",
+      "displayName": "",
+      "id": "e4014",
+      "name": "wood.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "938e8": {
+      "importer": "gltf-material",
+      "uuid": "9589d73e-75b4-4f50-a991-908054a4edcc@938e8",
+      "displayName": "",
+      "id": "938e8",
+      "name": "woodDark.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "9589d73e-75b4-4f50-a991-908054a4edcc@88957",
+    "assetFinder": {
+      "meshes": [
+        "9589d73e-75b4-4f50-a991-908054a4edcc@6fb56"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "9589d73e-75b4-4f50-a991-908054a4edcc@e4014",
+        "9589d73e-75b4-4f50-a991-908054a4edcc@938e8"
+      ],
+      "scenes": [
+        "9589d73e-75b4-4f50-a991-908054a4edcc@88957"
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4d9686b6-aa74-4787-ad39-742ff5702b47",
+  "files": [],
+  "subMetas": {
+    "91144": {
+      "importer": "gltf-scene",
+      "uuid": "4d9686b6-aa74-4787-ad39-742ff5702b47@91144",
+      "displayName": "",
+      "id": "91144",
+      "name": "boat_large.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6fd75": {
+      "importer": "gltf-mesh",
+      "uuid": "4d9686b6-aa74-4787-ad39-742ff5702b47@6fd75",
+      "displayName": "",
+      "id": "6fd75",
+      "name": "boat_large_8angles.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4014": {
+      "importer": "gltf-material",
+      "uuid": "4d9686b6-aa74-4787-ad39-742ff5702b47@e4014",
+      "displayName": "",
+      "id": "e4014",
+      "name": "wood.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "4d9686b6-aa74-4787-ad39-742ff5702b47@91144",
+    "assetFinder": {
+      "meshes": [
+        "4d9686b6-aa74-4787-ad39-742ff5702b47@6fd75"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "4d9686b6-aa74-4787-ad39-742ff5702b47@e4014"
+      ],
+      "scenes": [
+        "4d9686b6-aa74-4787-ad39-742ff5702b47@91144"
+      ]
+    }
+  }
+}

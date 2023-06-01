@@ -1,0 +1,170 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3",
+  "files": [],
+  "subMetas": {
+    "70846": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@70846",
+      "displayName": "",
+      "id": "70846",
+      "name": "OrangeTowel_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "85f21": {
+      "importer": "gltf-mesh",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@85f21",
+      "displayName": "",
+      "id": "85f21",
+      "name": "OrangeTowelGeo_52.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1d601": {
+      "importer": "gltf-embeded-image",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@1d601",
+      "displayName": "",
+      "id": "1d601",
+      "name": "ColourfulTowel_Normal.png.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "d642e": {
+      "importer": "texture",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@d642e",
+      "displayName": "",
+      "id": "d642e",
+      "name": "OrangeTowel_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@70846"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3a30": {
+      "importer": "texture",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@a3a30",
+      "displayName": "",
+      "id": "a3a30",
+      "name": "ColourfulTowel_Normal.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@1d601"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4a9f9": {
+      "importer": "gltf-material",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@4a9f9",
+      "displayName": "",
+      "id": "4a9f9",
+      "name": "OrangeTowel.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a0317": {
+      "importer": "gltf-scene",
+      "uuid": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@a0317",
+      "displayName": "",
+      "id": "a0317",
+      "name": "OrangeTowels.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "OrangeTowel_BaseColor.png",
+        "uri": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@70846"
+      },
+      {
+        "name": "ColourfulTowel_Normal.png",
+        "uri": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@1d601"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "4653fbdd-6f01-4ea9-87af-38b051af3ce3@a0317",
+    "assetFinder": {
+      "meshes": [
+        "4653fbdd-6f01-4ea9-87af-38b051af3ce3@85f21"
+      ],
+      "skeletons": [],
+      "textures": [
+        "4653fbdd-6f01-4ea9-87af-38b051af3ce3@d642e",
+        "4653fbdd-6f01-4ea9-87af-38b051af3ce3@a3a30"
+      ],
+      "materials": [
+        "4653fbdd-6f01-4ea9-87af-38b051af3ce3@4a9f9"
+      ],
+      "scenes": [
+        "4653fbdd-6f01-4ea9-87af-38b051af3ce3@a0317"
+      ]
+    }
+  }
+}

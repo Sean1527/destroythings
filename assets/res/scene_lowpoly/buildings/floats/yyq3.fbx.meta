@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287",
+  "files": [],
+  "subMetas": {
+    "82864": {
+      "importer": "gltf-mesh",
+      "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@82864",
+      "displayName": "",
+      "id": "82864",
+      "name": "Floaters.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7fdfc": {
+      "importer": "gltf-embeded-image",
+      "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@7fdfc",
+      "displayName": "",
+      "id": "7fdfc",
+      "name": "FloaterGeo_initialShadingGroup_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "6c887": {
+      "importer": "texture",
+      "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@6c887",
+      "displayName": "",
+      "id": "6c887",
+      "name": "FloaterGeo_initialShadingGroup_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@7fdfc"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7fb95": {
+      "importer": "gltf-material",
+      "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@7fb95",
+      "displayName": "",
+      "id": "7fb95",
+      "name": "FloaterMaterial.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0cdc4": {
+      "importer": "gltf-scene",
+      "uuid": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@0cdc4",
+      "displayName": "",
+      "id": "0cdc4",
+      "name": "yyq3.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "FloaterGeo_initialShadingGroup_BaseColor.png",
+        "uri": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@7fdfc"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "cb6c1b6e-95a8-4100-9a79-3dced44a1287@0cdc4",
+    "assetFinder": {
+      "meshes": [
+        "cb6c1b6e-95a8-4100-9a79-3dced44a1287@82864"
+      ],
+      "skeletons": [],
+      "textures": [
+        "cb6c1b6e-95a8-4100-9a79-3dced44a1287@6c887"
+      ],
+      "materials": [
+        "cb6c1b6e-95a8-4100-9a79-3dced44a1287@7fb95"
+      ],
+      "scenes": [
+        "cb6c1b6e-95a8-4100-9a79-3dced44a1287@0cdc4"
+      ]
+    }
+  }
+}

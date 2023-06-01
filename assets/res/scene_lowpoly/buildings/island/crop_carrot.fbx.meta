@@ -1,0 +1,95 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1090aee8-75ca-40ee-abf7-342814de6972",
+  "files": [],
+  "subMetas": {
+    "53398": {
+      "importer": "gltf-material",
+      "uuid": "1090aee8-75ca-40ee-abf7-342814de6972@53398",
+      "displayName": "",
+      "id": "53398",
+      "name": "grass.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3b24": {
+      "importer": "gltf-mesh",
+      "uuid": "1090aee8-75ca-40ee-abf7-342814de6972@a3b24",
+      "displayName": "",
+      "id": "a3b24",
+      "name": "crop_carrot_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4e9ff": {
+      "importer": "gltf-material",
+      "uuid": "1090aee8-75ca-40ee-abf7-342814de6972@4e9ff",
+      "displayName": "",
+      "id": "4e9ff",
+      "name": "leafsFall.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c0690": {
+      "importer": "gltf-scene",
+      "uuid": "1090aee8-75ca-40ee-abf7-342814de6972@c0690",
+      "displayName": "",
+      "id": "c0690",
+      "name": "crop_carrot.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "1090aee8-75ca-40ee-abf7-342814de6972@c0690",
+    "assetFinder": {
+      "meshes": [
+        "1090aee8-75ca-40ee-abf7-342814de6972@a3b24"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "1090aee8-75ca-40ee-abf7-342814de6972@53398",
+        "1090aee8-75ca-40ee-abf7-342814de6972@4e9ff"
+      ],
+      "scenes": [
+        "1090aee8-75ca-40ee-abf7-342814de6972@c0690"
+      ]
+    }
+  }
+}

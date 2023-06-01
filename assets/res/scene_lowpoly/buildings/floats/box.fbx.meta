@@ -1,0 +1,95 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c82bc2ab-f024-4928-a19d-e4474829a2fc",
+  "files": [],
+  "subMetas": {
+    "99038": {
+      "importer": "gltf-material",
+      "uuid": "c82bc2ab-f024-4928-a19d-e4474829a2fc@99038",
+      "displayName": "",
+      "id": "99038",
+      "name": "rock.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09884": {
+      "importer": "gltf-mesh",
+      "uuid": "c82bc2ab-f024-4928-a19d-e4474829a2fc@09884",
+      "displayName": "",
+      "id": "09884",
+      "name": "box_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4014": {
+      "importer": "gltf-material",
+      "uuid": "c82bc2ab-f024-4928-a19d-e4474829a2fc@e4014",
+      "displayName": "",
+      "id": "e4014",
+      "name": "wood.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bd3ce": {
+      "importer": "gltf-scene",
+      "uuid": "c82bc2ab-f024-4928-a19d-e4474829a2fc@bd3ce",
+      "displayName": "",
+      "id": "bd3ce",
+      "name": "box.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "c82bc2ab-f024-4928-a19d-e4474829a2fc@bd3ce",
+    "assetFinder": {
+      "meshes": [
+        "c82bc2ab-f024-4928-a19d-e4474829a2fc@09884"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "c82bc2ab-f024-4928-a19d-e4474829a2fc@e4014",
+        "c82bc2ab-f024-4928-a19d-e4474829a2fc@99038"
+      ],
+      "scenes": [
+        "c82bc2ab-f024-4928-a19d-e4474829a2fc@bd3ce"
+      ]
+    }
+  }
+}

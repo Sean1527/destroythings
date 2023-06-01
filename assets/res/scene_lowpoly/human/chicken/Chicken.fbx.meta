@@ -1,0 +1,145 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5",
+  "files": [],
+  "subMetas": {
+    "3817c": {
+      "importer": "gltf-mesh",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@3817c",
+      "displayName": "",
+      "id": "3817c",
+      "name": "Chicken.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "438fe": {
+      "importer": "gltf-skeleton",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@438fe",
+      "displayName": "",
+      "id": "438fe",
+      "name": "UnnamedSkeleton.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 37
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f7545": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@f7545",
+      "displayName": "",
+      "id": "f7545",
+      "name": "Texture.012.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "7a15f": {
+      "importer": "texture",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@7a15f",
+      "displayName": "",
+      "id": "7a15f",
+      "name": "Texture.012.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Thief.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "710dd": {
+      "importer": "gltf-material",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@710dd",
+      "displayName": "",
+      "id": "710dd",
+      "name": "Material.013.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "25d52": {
+      "importer": "gltf-scene",
+      "uuid": "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52",
+      "displayName": "",
+      "id": "25d52",
+      "name": "Chicken.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Texture.012",
+        "remap": "db://assets/res/scene_lowpoly/human/chicken/Tex_Chicken_Thief.png",
+        "uri": "1380e419-4a67-436e-9c1c-7c1e889e7da5@f7545"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52",
+    "assetFinder": {
+      "meshes": [
+        "1380e419-4a67-436e-9c1c-7c1e889e7da5@3817c"
+      ],
+      "skeletons": [
+        "1380e419-4a67-436e-9c1c-7c1e889e7da5@438fe"
+      ],
+      "textures": [
+        "1380e419-4a67-436e-9c1c-7c1e889e7da5@7a15f"
+      ],
+      "materials": [
+        "1380e419-4a67-436e-9c1c-7c1e889e7da5@710dd"
+      ],
+      "scenes": [
+        "1380e419-4a67-436e-9c1c-7c1e889e7da5@25d52"
+      ]
+    }
+  }
+}

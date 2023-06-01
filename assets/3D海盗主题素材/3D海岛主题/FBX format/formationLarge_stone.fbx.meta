@@ -1,0 +1,78 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "010b1d42-7520-41c7-99bb-effd8a8dbb10",
+  "files": [],
+  "subMetas": {
+    "8e8fe": {
+      "importer": "gltf-mesh",
+      "uuid": "010b1d42-7520-41c7-99bb-effd8a8dbb10@8e8fe",
+      "displayName": "",
+      "id": "8e8fe",
+      "name": "formationLarge_stone.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4de10": {
+      "importer": "gltf-material",
+      "uuid": "010b1d42-7520-41c7-99bb-effd8a8dbb10@4de10",
+      "displayName": "",
+      "id": "4de10",
+      "name": "stone.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c3c0": {
+      "importer": "gltf-scene",
+      "uuid": "010b1d42-7520-41c7-99bb-effd8a8dbb10@0c3c0",
+      "displayName": "",
+      "id": "0c3c0",
+      "name": "formationLarge_stone.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "010b1d42-7520-41c7-99bb-effd8a8dbb10@0c3c0",
+    "assetFinder": {
+      "meshes": [
+        "010b1d42-7520-41c7-99bb-effd8a8dbb10@8e8fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "010b1d42-7520-41c7-99bb-effd8a8dbb10@4de10"
+      ],
+      "scenes": [
+        "010b1d42-7520-41c7-99bb-effd8a8dbb10@0c3c0"
+      ]
+    }
+  }
+}

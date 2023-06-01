@@ -1,0 +1,170 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60",
+  "files": [],
+  "subMetas": {
+    "fea67": {
+      "importer": "gltf-mesh",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@fea67",
+      "displayName": "",
+      "id": "fea67",
+      "name": "RedTowelGeo_55.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "adfdc": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@adfdc",
+      "displayName": "",
+      "id": "adfdc",
+      "name": "ColourfulTowel_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "1d601": {
+      "importer": "gltf-embeded-image",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@1d601",
+      "displayName": "",
+      "id": "1d601",
+      "name": "ColourfulTowel_Normal.png.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "11bd5": {
+      "importer": "texture",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@11bd5",
+      "displayName": "",
+      "id": "11bd5",
+      "name": "ColourfulTowel_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f16cd560-8692-4ba9-898d-b97e5c828b60@adfdc"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3a30": {
+      "importer": "texture",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@a3a30",
+      "displayName": "",
+      "id": "a3a30",
+      "name": "ColourfulTowel_Normal.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f16cd560-8692-4ba9-898d-b97e5c828b60@1d601"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "738bb": {
+      "importer": "gltf-material",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@738bb",
+      "displayName": "",
+      "id": "738bb",
+      "name": "ColourfulTowel_BaseColor_Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "00d2e": {
+      "importer": "gltf-scene",
+      "uuid": "f16cd560-8692-4ba9-898d-b97e5c828b60@00d2e",
+      "displayName": "",
+      "id": "00d2e",
+      "name": "RedTowels.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "ColourfulTowel_BaseColor.png",
+        "uri": "f16cd560-8692-4ba9-898d-b97e5c828b60@adfdc"
+      },
+      {
+        "name": "ColourfulTowel_Normal.png",
+        "uri": "f16cd560-8692-4ba9-898d-b97e5c828b60@1d601"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "f16cd560-8692-4ba9-898d-b97e5c828b60@00d2e",
+    "assetFinder": {
+      "meshes": [
+        "f16cd560-8692-4ba9-898d-b97e5c828b60@fea67"
+      ],
+      "skeletons": [],
+      "textures": [
+        "f16cd560-8692-4ba9-898d-b97e5c828b60@11bd5",
+        "f16cd560-8692-4ba9-898d-b97e5c828b60@a3a30"
+      ],
+      "materials": [
+        "f16cd560-8692-4ba9-898d-b97e5c828b60@738bb"
+      ],
+      "scenes": [
+        "f16cd560-8692-4ba9-898d-b97e5c828b60@00d2e"
+      ]
+    }
+  }
+}

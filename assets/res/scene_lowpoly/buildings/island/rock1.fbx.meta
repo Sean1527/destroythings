@@ -1,0 +1,170 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "92acdf43-fe9e-4883-872d-d66283529102",
+  "files": [],
+  "subMetas": {
+    "ac780": {
+      "importer": "gltf-mesh",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@ac780",
+      "displayName": "",
+      "id": "ac780",
+      "name": "Rocks01WithGrass.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9f5ab": {
+      "importer": "gltf-embeded-image",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@9f5ab",
+      "displayName": "",
+      "id": "9f5ab",
+      "name": "Rock01Geo_initialShadingGroup_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "65d84": {
+      "importer": "gltf-embeded-image",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@65d84",
+      "displayName": "",
+      "id": "65d84",
+      "name": "Rock01Geo_initialShadingGroup_Normal.png.image",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "af062": {
+      "importer": "texture",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@af062",
+      "displayName": "",
+      "id": "af062",
+      "name": "Rock01Geo_initialShadingGroup_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "92acdf43-fe9e-4883-872d-d66283529102@9f5ab"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "709b2": {
+      "importer": "texture",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@709b2",
+      "displayName": "",
+      "id": "709b2",
+      "name": "Rock01Geo_initialShadingGroup_Normal.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "92acdf43-fe9e-4883-872d-d66283529102@65d84"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "eede3": {
+      "importer": "gltf-material",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@eede3",
+      "displayName": "",
+      "id": "eede3",
+      "name": "Rock01WithGrassMat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3ba86": {
+      "importer": "gltf-scene",
+      "uuid": "92acdf43-fe9e-4883-872d-d66283529102@3ba86",
+      "displayName": "",
+      "id": "3ba86",
+      "name": "rock1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Rock01Geo_initialShadingGroup_BaseColor.png",
+        "uri": "92acdf43-fe9e-4883-872d-d66283529102@9f5ab"
+      },
+      {
+        "name": "Rock01Geo_initialShadingGroup_Normal.png",
+        "uri": "92acdf43-fe9e-4883-872d-d66283529102@65d84"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "92acdf43-fe9e-4883-872d-d66283529102@3ba86",
+    "assetFinder": {
+      "meshes": [
+        "92acdf43-fe9e-4883-872d-d66283529102@ac780"
+      ],
+      "skeletons": [],
+      "textures": [
+        "92acdf43-fe9e-4883-872d-d66283529102@af062",
+        "92acdf43-fe9e-4883-872d-d66283529102@709b2"
+      ],
+      "materials": [
+        "92acdf43-fe9e-4883-872d-d66283529102@eede3"
+      ],
+      "scenes": [
+        "92acdf43-fe9e-4883-872d-d66283529102@3ba86"
+      ]
+    }
+  }
+}

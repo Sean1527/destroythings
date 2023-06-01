@@ -1,0 +1,166 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "4512468f-91e0-421f-9a5c-85d35f693992",
+  "files": [],
+  "subMetas": {
+    "99038": {
+      "importer": "gltf-material",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@99038",
+      "displayName": "",
+      "id": "99038",
+      "name": "rock.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cb6bf": {
+      "importer": "gltf-mesh",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@cb6bf",
+      "displayName": "",
+      "id": "cb6bf",
+      "name": "campfire.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ea143": {
+      "importer": "gltf-mesh",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@ea143",
+      "displayName": "",
+      "id": "ea143",
+      "name": "bucket.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1a7ae": {
+      "importer": "gltf-mesh",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@1a7ae",
+      "displayName": "",
+      "id": "1a7ae",
+      "name": "rocks.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "65ac4": {
+      "importer": "gltf-mesh",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@65ac4",
+      "displayName": "",
+      "id": "65ac4",
+      "name": "wood.mesh",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e4014": {
+      "importer": "gltf-material",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@e4014",
+      "displayName": "",
+      "id": "e4014",
+      "name": "wood.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "16ef1": {
+      "importer": "gltf-material",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@16ef1",
+      "displayName": "",
+      "id": "16ef1",
+      "name": "metal.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9c49d": {
+      "importer": "gltf-scene",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@9c49d",
+      "displayName": "",
+      "id": "9c49d",
+      "name": "campfire.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "4512468f-91e0-421f-9a5c-85d35f693992@9c49d",
+    "assetFinder": {
+      "meshes": [
+        "4512468f-91e0-421f-9a5c-85d35f693992@cb6bf",
+        "4512468f-91e0-421f-9a5c-85d35f693992@ea143",
+        "4512468f-91e0-421f-9a5c-85d35f693992@1a7ae",
+        "4512468f-91e0-421f-9a5c-85d35f693992@65ac4"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "4512468f-91e0-421f-9a5c-85d35f693992@e4014",
+        "4512468f-91e0-421f-9a5c-85d35f693992@16ef1",
+        "4512468f-91e0-421f-9a5c-85d35f693992@99038"
+      ],
+      "scenes": [
+        "4512468f-91e0-421f-9a5c-85d35f693992@9c49d"
+      ]
+    }
+  }
+}

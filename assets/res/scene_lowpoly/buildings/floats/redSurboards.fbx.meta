@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c",
+  "files": [],
+  "subMetas": {
+    "298db": {
+      "importer": "gltf-mesh",
+      "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@298db",
+      "displayName": "",
+      "id": "298db",
+      "name": "RedSurfboards.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8dfb5": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dfb5",
+      "displayName": "",
+      "id": "8dfb5",
+      "name": "RedSurfBoard_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "6a58b": {
+      "importer": "texture",
+      "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@6a58b",
+      "displayName": "",
+      "id": "6a58b",
+      "name": "RedSurfBoard_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dfb5"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "575b0": {
+      "importer": "gltf-material",
+      "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@575b0",
+      "displayName": "",
+      "id": "575b0",
+      "name": "RedSurfboard_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8dd48": {
+      "importer": "gltf-scene",
+      "uuid": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dd48",
+      "displayName": "",
+      "id": "8dd48",
+      "name": "redSurboards.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "RedSurfBoard_BaseColor.png",
+        "uri": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dfb5"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dd48",
+    "assetFinder": {
+      "meshes": [
+        "1ea36e97-b502-443d-bd03-d38b5cd3b85c@298db"
+      ],
+      "skeletons": [],
+      "textures": [
+        "1ea36e97-b502-443d-bd03-d38b5cd3b85c@6a58b"
+      ],
+      "materials": [
+        "1ea36e97-b502-443d-bd03-d38b5cd3b85c@575b0"
+      ],
+      "scenes": [
+        "1ea36e97-b502-443d-bd03-d38b5cd3b85c@8dd48"
+      ]
+    }
+  }
+}

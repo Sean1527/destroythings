@@ -1,0 +1,125 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb",
+  "files": [],
+  "subMetas": {
+    "14386": {
+      "importer": "gltf-material",
+      "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb@14386",
+      "displayName": "",
+      "id": "14386",
+      "name": "BlueSurfboard_Material.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "78446": {
+      "importer": "gltf-embeded-image",
+      "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb@78446",
+      "displayName": "",
+      "id": "78446",
+      "name": "BlueSurfboard_BaseColor.png.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "c6882": {
+      "importer": "gltf-mesh",
+      "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb@c6882",
+      "displayName": "",
+      "id": "c6882",
+      "name": "BlueSurfboards.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5bb54": {
+      "importer": "texture",
+      "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb@5bb54",
+      "displayName": "",
+      "id": "5bb54",
+      "name": "BlueSurfboard_BaseColor.png.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7d7e0846-7f38-4269-b68d-50f55f5327cb@78446"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02cc0": {
+      "importer": "gltf-scene",
+      "uuid": "7d7e0846-7f38-4269-b68d-50f55f5327cb@02cc0",
+      "displayName": "",
+      "id": "02cc0",
+      "name": "blueSurboards.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "BlueSurfboard_BaseColor.png",
+        "uri": "7d7e0846-7f38-4269-b68d-50f55f5327cb@78446"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "7d7e0846-7f38-4269-b68d-50f55f5327cb@02cc0",
+    "assetFinder": {
+      "meshes": [
+        "7d7e0846-7f38-4269-b68d-50f55f5327cb@c6882"
+      ],
+      "skeletons": [],
+      "textures": [
+        "7d7e0846-7f38-4269-b68d-50f55f5327cb@5bb54"
+      ],
+      "materials": [
+        "7d7e0846-7f38-4269-b68d-50f55f5327cb@14386"
+      ],
+      "scenes": [
+        "7d7e0846-7f38-4269-b68d-50f55f5327cb@02cc0"
+      ]
+    }
+  }
+}
