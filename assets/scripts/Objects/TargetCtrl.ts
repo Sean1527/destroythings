@@ -74,7 +74,7 @@ export class TargetCtrl extends Component {
                 break;
             case TargetType.People:
                 // _targetAni.play('scare'); 
-                AudioMgr.inst.playOneShot("scarewoman",0.6)
+                // AudioMgr.inst.playOneShot("scarewoman",0.6)
                 break;
         
             default:
@@ -98,7 +98,7 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                // _targetAni.crossFade('die'); 
+                // _targetAni.crossFade(''); 
                 AudioMgr.inst.playOneShot("dieBuilding",0.4)
                 break;
             case TargetType.Animal:
@@ -109,8 +109,8 @@ export class TargetCtrl extends Component {
                 AudioMgr.inst.playOneShot("dieTree",0.6)
                 break;
             case TargetType.People:
-                // _targetAni.crossFade('die'); 
-                AudioMgr.inst.playOneShot("diewoman",0.6)
+                _targetAni.crossFade('CINEMA_4D_die'); 
+                AudioMgr.inst.playOneShot("scarewoman",0.6)
                 break;
         
             default:

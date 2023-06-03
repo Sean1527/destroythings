@@ -34,20 +34,20 @@ export class LevelGoalManager
         //在这里添加关卡目标
         {
             let MyLevelGoal = new LevelGoal();
-            MyLevelGoal.m_TimeValue = 20.0
-            MyLevelGoal.m_ScoreValue = 10.0
+            MyLevelGoal.m_TimeValue = 120.0
+            MyLevelGoal.m_ScoreValue = 20.0
             this.m_LevelGoalList.push(MyLevelGoal);
         }
         
         {
             let MyLevelGoal = new LevelGoal();
-            MyLevelGoal.m_TimeValue = 60.0
+            MyLevelGoal.m_TimeValue = 120.0
             this.m_LevelGoalList.push(MyLevelGoal);
         }
         
         {
             let MyLevelGoal = new LevelGoal();
-            MyLevelGoal.m_TimeValue = 60.0
+            MyLevelGoal.m_TimeValue = 120.0
             MyLevelGoal.m_DamageInflict = 60.0
             
             this.m_LevelGoalList.push(MyLevelGoal);

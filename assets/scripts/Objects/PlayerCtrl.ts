@@ -64,8 +64,8 @@ export class PlayerCtrl extends Component {
         if(target_ctrl != null)
         {
             //计算当前距离
-            let dx = this.node.position.x -ndTarget.position.x;
-            let dz = this.node.position.z -ndTarget.position.z;
+            let dx = this.node.position.x -ndTarget.worldPosition.x;
+            let dz = this.node.position.z -ndTarget.worldPosition.z;
             let curDistance = Math.sqrt(dx*dx + dz*dz);
             //计算吞噬距离
             let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
@@ -73,7 +73,7 @@ export class PlayerCtrl extends Component {
             let eatDistance = myRadius - targetRadius;
 
             let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
-
+            
             // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
 
             if (eatRatio >= 1) {
