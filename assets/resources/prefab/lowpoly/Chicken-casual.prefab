@@ -41,16 +41,16 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1.186,
-      "y": 0.59,
-      "z": 7.752
+      "x": -0.4239999999999995,
+      "y": 0.338,
+      "z": 1.3430000000000035
     },
     "_lrot": {
       "__type__": "cc.Quat",
       "x": 0,
-      "y": -0.4565234717558456,
+      "y": -0.18696983863741498,
       "z": 0,
-      "w": 0.88971136877978
+      "w": 0.9823656546520235
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -63,7 +63,7 @@
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -54.326,
+      "y": -21.551999999999996,
       "z": 0
     },
     "_id": ""
@@ -3080,9 +3080,21 @@
     "__prefab": {
       "__id__": 106
     },
-    "playOnLoad": false,
-    "_clips": [],
-    "_defaultClip": null,
+    "playOnLoad": true,
+    "_clips": [
+      {
+        "__uuid__": "d036c2c8-8956-43f1-bfc3-7b5a53fcdcca@18d6f",
+        "__expectedType__": "cc.AnimationClip"
+      },
+      {
+        "__uuid__": "228dd9da-5287-4a18-a8f2-6b1ae9dacf88@eaf7d",
+        "__expectedType__": "cc.AnimationClip"
+      }
+    ],
+    "_defaultClip": {
+      "__uuid__": "d036c2c8-8956-43f1-bfc3-7b5a53fcdcca@18d6f",
+      "__expectedType__": "cc.AnimationClip"
+    },
     "_useBakedAnimation": true,
     "_sockets": [],
     "_id": ""

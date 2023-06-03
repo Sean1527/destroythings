@@ -1,0 +1,81 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "42e890f4-92d1-4f10-a6a0-3ff547163036",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "18d6f": {
+      "importer": "gltf-animation",
+      "uuid": "42e890f4-92d1-4f10-a6a0-3ff547163036@18d6f",
+      "displayName": "",
+      "id": "18d6f",
+      "name": "mixamo.com.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.375
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "655b0": {
+      "importer": "gltf-scene",
+      "uuid": "42e890f4-92d1-4f10-a6a0-3ff547163036@655b0",
+      "displayName": "",
+      "id": "655b0",
+      "name": "Chicken-dance1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 1.375,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "mixamo.com",
+            "from": 0,
+            "to": 1.375,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "42e890f4-92d1-4f10-a6a0-3ff547163036@655b0",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "42e890f4-92d1-4f10-a6a0-3ff547163036@655b0"
+      ]
+    }
+  }
+}

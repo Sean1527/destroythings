@@ -1,0 +1,81 @@
+{
+  "ver": "2.3.4",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "228dd9da-5287-4a18-a8f2-6b1ae9dacf88",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "eaf7d": {
+      "importer": "gltf-animation",
+      "uuid": "228dd9da-5287-4a18-a8f2-6b1ae9dacf88@eaf7d",
+      "displayName": "",
+      "id": "eaf7d",
+      "name": "CINEMA_4D_die.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.5416666865348816
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "2a430": {
+      "importer": "gltf-scene",
+      "uuid": "228dd9da-5287-4a18-a8f2-6b1ae9dacf88@2a430",
+      "displayName": "",
+      "id": "2a430",
+      "name": "Chicken-die.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "redirect": "228dd9da-5287-4a18-a8f2-6b1ae9dacf88@2a430",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "228dd9da-5287-4a18-a8f2-6b1ae9dacf88@2a430"
+      ]
+    },
+    "animationImportSettings": [
+      {
+        "name": "CINEMA_4D_die",
+        "duration": 0.5416666865348816,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "CINEMA_4D_die",
+            "from": 0,
+            "to": 0.5416666865348816,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ]
+  }
+}
