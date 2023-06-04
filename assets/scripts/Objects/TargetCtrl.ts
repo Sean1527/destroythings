@@ -1,4 +1,4 @@
-import { _decorator, Component, Enum, Node ,Animation, BoxCollider} from 'cc';
+import { _decorator, Component, Enum, Node ,Animation, BoxCollider, Vec3, quat} from 'cc';
 import { PlayerCtrl } from './PlayerCtrl';
 import { constant } from '../framework/constant';
 import { AudioMgr } from '../framework/AudioMgr';
@@ -25,20 +25,27 @@ export class TargetCtrl extends Component {
     private myLevel:number = 3;//目标的等级
 
     private targetState:number = constant.TARGETSTATE.IDLE;
-
+    // private  _oriRota = new Vec3()
+    // private  _oriPos = new Vec3()
 
     start() {
         let Collider = this.node.getComponent(BoxCollider);
         Collider.on('onTriggerExit', this.onTriggerExit, this);
+        
     }
     
     public init()
     {
         this.targetState = constant.TARGETSTATE.IDLE;
         let _targetAni = this.node.getComponent(Animation)
-        // _targetAni.play();
+        _targetAni.play()
         AudioMgr.inst.stop();
         
+    }
+
+    public GetLevel():number
+    {
+        return this.myLevel;
     }
 
     public GetMyValue():number
@@ -49,7 +56,10 @@ export class TargetCtrl extends Component {
 
     /** 惊吓（触碰但不吞噬） */
     public ScareTarget()
-    {   
+    {   //保存初始角度和位置
+        // this.node.rotation.getEulerAngles(this._oriRota); 
+        // this._oriPos = this.node.getPosition();
+
         console.log('targetscare')
         let _targetAni = this.node.getComponent(Animation)
         //避免重复播放
@@ -61,16 +71,16 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                // _targetAni.play('scare'); 
-                AudioMgr.inst.playOneShot("scarebuilding",0.6)
+                _targetAni.play('scare'); 
+                // AudioMgr.inst.playOneShot("scarebuilding",0.6)
                 break;
             case TargetType.Animal:
-                // _targetAni.play('scare'); 
+                _targetAni.play('scare'); 
                 
                 break;
             case TargetType.Tree:
-                // _targetAni.play('scare'); 
-                AudioMgr.inst.playOneShot("scaretree",0.6)
+                _targetAni.play('scare'); 
+                // AudioMgr.inst.playOneShot("scaretree",0.6)
                 break;
             case TargetType.People:
                 // _targetAni.play('scare'); 
@@ -98,14 +108,14 @@ export class TargetCtrl extends Component {
         switch (this.targetType)
         {
             case TargetType.Building:
-                // _targetAni.crossFade(''); 
+                _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("dieBuilding",0.4)
                 break;
             case TargetType.Animal:
-                // _targetAni.crossFade('die'); 
+                _targetAni.crossFade('die'); 
                 break;
             case TargetType.Tree:
-                // _targetAni.crossFade('die'); 
+                _targetAni.crossFade('die'); 
                 AudioMgr.inst.playOneShot("dieTree",0.6)
                 break;
             case TargetType.People:
@@ -127,7 +137,9 @@ export class TargetCtrl extends Component {
     }
 
     private onTriggerExit(){
-        this.init();
+        if (this.targetState !==constant.TARGETSTATE.DIEING) {
+            this.init();
+        }
         
     }
 

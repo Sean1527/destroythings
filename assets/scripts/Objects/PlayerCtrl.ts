@@ -27,6 +27,7 @@ export class PlayerCtrl extends Component {
     protected m_Direction:Vec3 = new Vec3(0,0,0);
 
 
+
     start () 
     {
         let Collider = this.node.getComponent(BoxCollider);
@@ -61,6 +62,7 @@ export class PlayerCtrl extends Component {
     {
         let ndTarget = event.otherCollider.node;
         let target_ctrl = ndTarget.getComponent(TargetCtrl);
+        
         if(target_ctrl != null)
         {
             //计算当前距离
@@ -73,9 +75,12 @@ export class PlayerCtrl extends Component {
             let eatDistance = myRadius - targetRadius;
 
             let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
+
+            //判断碰撞盒大小比，根据比值判断能否有反馈以及反馈的程度
+
+
             
             // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
-
             if (eatRatio >= 1) {
                 target_ctrl.EatTarget(this.node,this)
             }else{

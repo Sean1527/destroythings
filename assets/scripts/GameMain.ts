@@ -32,7 +32,8 @@ export class GameMain extends Component {
 
     public LoadLevel()
     {
-        director.loadScene("level", this.OnSceneLaunched);
+        // director.loadScene("level", this.OnSceneLaunched);
+        director.loadScene("level_lovpoly", this.OnSceneLaunched);
     }
 
     public LoadMain()
