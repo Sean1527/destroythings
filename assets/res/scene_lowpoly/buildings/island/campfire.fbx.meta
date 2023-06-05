@@ -12,7 +12,7 @@
       "id": "99038",
       "name": "rock.material",
       "userData": {
-        "gltfIndex": 2
+        "gltfIndex": 1
       },
       "ver": "1.0.14",
       "imported": true,
@@ -38,23 +38,6 @@
       ],
       "subMetas": {}
     },
-    "ea143": {
-      "importer": "gltf-mesh",
-      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@ea143",
-      "displayName": "",
-      "id": "ea143",
-      "name": "bucket.mesh",
-      "userData": {
-        "gltfIndex": 1
-      },
-      "ver": "1.1.0",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
     "1a7ae": {
       "importer": "gltf-mesh",
       "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@1a7ae",
@@ -62,7 +45,7 @@
       "id": "1a7ae",
       "name": "rocks.mesh",
       "userData": {
-        "gltfIndex": 2
+        "gltfIndex": 1
       },
       "ver": "1.1.0",
       "imported": true,
@@ -78,6 +61,23 @@
       "displayName": "",
       "id": "65ac4",
       "name": "wood.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ea143": {
+      "importer": "gltf-mesh",
+      "uuid": "4512468f-91e0-421f-9a5c-85d35f693992@ea143",
+      "displayName": "",
+      "id": "ea143",
+      "name": "bucket.mesh",
       "userData": {
         "gltfIndex": 3
       },
@@ -112,7 +112,7 @@
       "id": "16ef1",
       "name": "metal.material",
       "userData": {
-        "gltfIndex": 1
+        "gltfIndex": 2
       },
       "ver": "1.0.14",
       "imported": true,
@@ -147,16 +147,16 @@
     "assetFinder": {
       "meshes": [
         "4512468f-91e0-421f-9a5c-85d35f693992@cb6bf",
-        "4512468f-91e0-421f-9a5c-85d35f693992@ea143",
         "4512468f-91e0-421f-9a5c-85d35f693992@1a7ae",
-        "4512468f-91e0-421f-9a5c-85d35f693992@65ac4"
+        "4512468f-91e0-421f-9a5c-85d35f693992@65ac4",
+        "4512468f-91e0-421f-9a5c-85d35f693992@ea143"
       ],
       "skeletons": [],
       "textures": [],
       "materials": [
         "4512468f-91e0-421f-9a5c-85d35f693992@e4014",
-        "4512468f-91e0-421f-9a5c-85d35f693992@16ef1",
-        "4512468f-91e0-421f-9a5c-85d35f693992@99038"
+        "4512468f-91e0-421f-9a5c-85d35f693992@99038",
+        "4512468f-91e0-421f-9a5c-85d35f693992@16ef1"
       ],
       "scenes": [
         "4512468f-91e0-421f-9a5c-85d35f693992@9c49d"
