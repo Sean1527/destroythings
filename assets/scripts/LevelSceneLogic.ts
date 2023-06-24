@@ -192,9 +192,10 @@ export class LevelSceneLogic extends Component {
             NewNode.parent = director.getScene();
             let MyPlayerCtrl = NewNode.getComponent(PlayerNPCCtrl)
             MyPlayerCtrl.SetName(MyLevelPlayers.m_LevelPlayer[i].m_PlayerName);
+            //MyPlayerCtrl.SetValue(0);
             MyPlayerCtrl.SetValue(MyLevelPlayers.m_LevelPlayer[i].m_PlayerValue);
-            let x = Math.random() * 20.0 - 20.0
-            let z = Math.random() * 20.0
+            let x = (Math.random() - 0.5) * 80.0
+            let z = (Math.random() - 0.5) * 80.0 + 60
             NewNode.setPosition(new Vec3(x, 0, z))
 
             this.m_PlayerNPCs.push(MyPlayerCtrl);

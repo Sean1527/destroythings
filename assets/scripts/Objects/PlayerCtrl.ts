@@ -1,6 +1,7 @@
 import { _decorator, BoxCollider, Component, ITriggerEvent, Label, Node, Vec3 } from 'cc';
 import { TargetCtrl } from './TargetCtrl';
 import { LevelSceneLogic } from '../LevelSceneLogic';
+import { constant } from '../framework/constant';
 const { ccclass, property } = _decorator;
 
 @ccclass('PlayerCtrl')
@@ -26,6 +27,7 @@ export class PlayerCtrl extends Component {
 
     protected m_Direction:Vec3 = new Vec3(0,0,0);
 
+    private targetState:number = constant.TARGETSTATE.IDLE;
 
 
     start () 
@@ -88,7 +90,44 @@ export class PlayerCtrl extends Component {
                 target_ctrl.ScareTarget();
             }
         }
+
+        let player_ctrl = ndTarget.getComponent(PlayerCtrl);
+        if(player_ctrl != null)
+        {
+            if(this.GetCurValue() > player_ctrl.GetCurValue())
+            {
+                player_ctrl.EatTarget(this.node,this)
+            }
+           
+        }
+    }
+
+    /** 被吞噬 */
+    public EatTarget(player:Node,scriptPlayer:PlayerCtrl)
+    {   
+        if (this.targetState ===constant.TARGETSTATE.DIEING) {
+            return
+        }
+        this.targetState = constant.TARGETSTATE.DIEING;
         
+        this.node.getComponent(BoxCollider).enabled = false;
+        this.node.setParent(player);
+        this.node.setPosition(0,0.2,0);
+        
+         
+        setTimeout(() => {
+            //调用销毁方法
+            this.DestroyMe(scriptPlayer);
+            //调用增加经验的方法
+            scriptPlayer.AddValueAndGrow(this.m_cur_value);
+        }, 800);
+      
+    }
+
+    //目标销毁
+    public DestroyMe(player:PlayerCtrl)
+    {    
+        this.node.destroy();
     }
 
 
@@ -102,6 +141,11 @@ export class PlayerCtrl extends Component {
             }
         }
         return this.m_next_values.length - 1;
+    }
+
+    public GetCurValue():number
+    {
+        return this.m_cur_value;
     }
 
     public AddValueAndGrow(value:number)

@@ -21,9 +21,16 @@ export class PlayerUserCtrl extends PlayerCtrl {
 
         this.m_PlayerName = UserData.GetInstance().GetPlayerData().Name;
 
-        if(GameMain.GetInstance().GetSkillByID(1))
+        let SI = GameMain.GetInstance().GetSkillByID(1);
+        if(SI != null)
         {
-            this.m_Speed = 10;
+            this.m_Speed = SI.CurrentLevel * 2.0 + 5.0;
+        }
+
+        SI = GameMain.GetInstance().GetSkillByID(2);
+        if(SI != null)
+        {
+            this.m_cur_value = SI.CurrentLevel * 5.0;
         }
     }
 

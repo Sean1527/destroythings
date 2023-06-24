@@ -96,6 +96,7 @@ export class GameMain extends Component {
         {
             if(UserData.GetInstance().m_PlayerData.Skills[i].SkillID == SkillID)
             {
+                UserData.GetInstance().m_PlayerData.Skills[i].CurrentLevel = UserData.GetInstance().m_PlayerData.Skills[i].CurrentLevel + 1;
                 found = true;
                 break;
             }
@@ -104,20 +105,21 @@ export class GameMain extends Component {
         {
             let NewSkill = new SkillDataInstance();
             NewSkill.SkillID = SkillID
+            NewSkill.CurrentLevel = 1;
             UserData.GetInstance().m_PlayerData.Skills.push(NewSkill);
         }
     }
 
-    public GetSkillByID(SkillID:number):boolean
+    public GetSkillByID(SkillID:number):SkillDataInstance
     {
         let found = false;
         for(let i = 0; i < UserData.GetInstance().m_PlayerData.Skills.length; ++i)
         {
             if(UserData.GetInstance().m_PlayerData.Skills[i].SkillID == SkillID)
             {
-                return true;
+                return UserData.GetInstance().m_PlayerData.Skills[i];
             }
         }
-        return false;
+        return null;
     }
 }

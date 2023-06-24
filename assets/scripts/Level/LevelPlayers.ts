@@ -44,24 +44,34 @@ export class LevelPlayersManager
         {
             let MyLevelPlayers = new LevelPlayers();
             MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello", 5))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello2", 15))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello3", 25))
-            this.m_LevelPlayers.push(MyLevelPlayers);
-        }
-        
-        {
-            let MyLevelPlayers = new LevelPlayers();
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello", 15))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello2", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello3", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello4", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello5", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello6", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello7", 0))
             this.m_LevelPlayers.push(MyLevelPlayers);
         }
         
         {
             let MyLevelPlayers = new LevelPlayers();
             MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello", 5))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello2", 15))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello3", 25))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello4", 35))
-            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello5", 40))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello2", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello3", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello4", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello5", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello6", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello7", 0))
+            this.m_LevelPlayers.push(MyLevelPlayers);
+        }
+        
+        {
+            let MyLevelPlayers = new LevelPlayers();
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello", 5))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello2", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello3", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello4", 0))
+            MyLevelPlayers.m_LevelPlayer.push(new LevelPlayer("Hello5", 0))
             this.m_LevelPlayers.push(MyLevelPlayers);
         }
     }
