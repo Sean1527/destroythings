@@ -96,7 +96,7 @@ export class UserData {
         this.m_PlayerData.Skills = [];
         this.m_PlayerData.EquippedItems = [];
         this.m_PlayerData.Quests = [];
-        this.m_PlayerData.Currency = 1000;
+        this.m_PlayerData.Currency = 0;//货币
         this.m_PlayerData.StatusEffects = [];
 
     }

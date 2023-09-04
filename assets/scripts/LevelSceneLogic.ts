@@ -277,6 +277,11 @@ export class LevelSceneLogic extends Component {
 
     public DoubleReward() 
     {
+        GameMain.GetInstance().ChaneMoney(200);//双倍领取
+        setTimeout(() =>{
+            GameMain.GetInstance().LoadMain();//返回主界面
+        },1000)
+        
         console.log("DoubleReward")
     }
 }

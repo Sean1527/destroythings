@@ -6800,6 +6800,9 @@
     "__prefab": {
       "__id__": 315
     },
+    "curMoney": {
+      "__id__": 74
+    },
     "_id": ""
   },
   {
@@ -6815,6 +6818,7 @@
       "__id__": 0
     },
     "fileId": "e9z5Crp/VN6Y//3Xk2ATk7",
+    "instance": null,
     "targetOverrides": null
   }
 ]

@@ -1,10 +1,13 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Label, Node } from 'cc';
 import { GameMain } from '../../GameMain';
 import { ttPlatform } from '../../Platform/ttPlatform';
+import { UserData } from '../../UserData/UserData';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainMenuUI')
 export class MainMenuUI extends Component {
+    @property(Label)
+    curMoney: Label = null;
 
     onEnable () {
         //this.node.on(Node.EventType.TOUCH_END, this.OnStartGame, this);
