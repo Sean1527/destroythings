@@ -112,9 +112,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
     },
     "_mobility": 0,
     "_layer": 1073741824,
@@ -302,14 +302,14 @@
       "r": 80,
       "g": 248,
       "b": 255,
-      "a": 153
+      "a": 32
     },
     "colorMax": {
       "__type__": "cc.Color",
-      "r": 213,
-      "g": 204,
-      "b": 159,
-      "a": 255
+      "r": 228,
+      "g": 226,
+      "b": 216,
+      "a": 19
     }
   },
   {
@@ -2420,7 +2420,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 183
@@ -6086,6 +6086,7 @@
       "__id__": 0
     },
     "fileId": "51L5P+adlMEIoguB/pArJS",
+    "instance": null,
     "targetOverrides": null
   }
 ]
