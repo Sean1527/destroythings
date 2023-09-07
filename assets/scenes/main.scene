@@ -27,7 +27,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 156
+      "__id__": 162
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -58,7 +58,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 157
+      "__id__": 163
     },
     "_id": "50a4808e-1fc5-46a5-92fe-abce283491ee"
   },
@@ -141,8 +141,8 @@
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": 0.0639765666557707,
-      "y": 0.4460823336352584,
+      "x": 0.06397656665577076,
+      "y": 0.44608233363525834,
       "z": 0.8239028751062037,
       "w": 0.3436591377065261
     },
@@ -179,13 +179,13 @@
       "a": 255
     },
     "_useColorTemperature": true,
-    "_colorTemperature": 7704,
+    "_colorTemperature": 9489,
     "_staticSettings": {
       "__id__": 5
     },
     "_visibility": -325058561,
-    "_illuminanceHDR": 75000,
-    "_illuminance": 75000,
+    "_illuminanceHDR": 90000,
+    "_illuminance": 90000,
     "_illuminanceLDR": 1.6927083333333335,
     "_shadowEnabled": false,
     "_shadowPcf": 0,
@@ -277,9 +277,9 @@
     "_far": 1000,
     "_color": {
       "__type__": "cc.Color",
-      "r": 51,
-      "g": 51,
-      "b": 51,
+      "r": 255,
+      "g": 255,
+      "b": 236,
       "a": 255
     },
     "_depth": 1,
@@ -520,7 +520,7 @@
     "__prefab": null,
     "_materials": [
       {
-        "__uuid__": "2841c523-5110-48c9-9aa0-3796a1241421",
+        "__uuid__": "815851a1-f917-4c58-a5e7-3d8069ca7fd1",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -2484,13 +2484,13 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 153
+        "__id__": 159
       },
       {
-        "__id__": 154
+        "__id__": 160
       },
       {
-        "__id__": 155
+        "__id__": 161
       }
     ],
     "_prefab": null,
@@ -2655,6 +2655,15 @@
       },
       {
         "__id__": 152
+      },
+      {
+        "__id__": 153
+      },
+      {
+        "__id__": 155
+      },
+      {
+        "__id__": 157
       }
     ],
     "removedComponents": []
@@ -2720,6 +2729,66 @@
       "y": 0,
       "z": 0
     }
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 154
+    },
+    "propertyPath": [
+      "_contentSize"
+    ],
+    "value": {
+      "__type__": "cc.Size",
+      "width": 54.05,
+      "height": 44.32
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "d7O5MuDhBEIbF1ttcE/9L8"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 156
+    },
+    "propertyPath": [
+      "_contentSize"
+    ],
+    "value": {
+      "__type__": "cc.Size",
+      "width": 47.38,
+      "height": 44.32
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "864a4/EalHZ62WsjzOALgk"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 158
+    },
+    "propertyPath": [
+      "_contentSize"
+    ],
+    "value": {
+      "__type__": "cc.Size",
+      "width": 47.38,
+      "height": 44.32
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "a8tvcd1ZdMG6Q1f0AYaxvD"
+    ]
   },
   {
     "__type__": "cc.UITransform",
@@ -2841,22 +2910,22 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 158
+      "__id__": 164
     },
     "shadows": {
-      "__id__": 159
+      "__id__": 165
     },
     "_skybox": {
-      "__id__": 160
+      "__id__": 166
     },
     "fog": {
-      "__id__": 161
+      "__id__": 167
     },
     "octree": {
-      "__id__": 162
+      "__id__": 168
     },
     "lightProbeInfo": {
-      "__id__": 163
+      "__id__": 169
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
@@ -2865,20 +2934,20 @@
     "__type__": "cc.AmbientInfo",
     "_skyColorHDR": {
       "__type__": "cc.Vec4",
-      "x": 0.2,
-      "y": 0.5,
-      "z": 0.8,
-      "w": 0.520833125
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 0.0520833125
     },
     "_skyColor": {
       "__type__": "cc.Vec4",
-      "x": 0.2,
-      "y": 0.5,
-      "z": 0.8,
-      "w": 0.520833125
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 0.0520833125
     },
-    "_skyIllumHDR": 20000,
-    "_skyIllum": 20000,
+    "_skyIllumHDR": 2000,
+    "_skyIllum": 2000,
     "_groundAlbedoHDR": {
       "__type__": "cc.Vec4",
       "x": 0.2,
@@ -2963,10 +3032,10 @@
     "_type": 0,
     "_fogColor": {
       "__type__": "cc.Color",
-      "r": 214,
-      "g": 214,
-      "b": 214,
-      "a": 255
+      "r": 222,
+      "g": 230,
+      "b": 230,
+      "a": 34
     },
     "_enabled": false,
     "_fogDensity": 0.3,
