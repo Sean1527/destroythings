@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Director, instantiate, Node, random, Vec3 } from 'cc';
+import { _decorator, Camera, Canvas, Component, director, Director, instantiate, Node, random, UITransform, Vec3 } from 'cc';
 import { GameMain } from './GameMain';
 import { UserData } from './UserData/UserData';
 import { LoseUI } from './UI/LevelUI/LoseUI';
@@ -24,7 +24,13 @@ enum LevelState {
 
 @ccclass('LevelSceneLogic')
 export class LevelSceneLogic extends Component {
+
     public static instance:LevelSceneLogic = null;
+
+    public Left : number = -50.0
+    public Right : number = 50.0
+    public Top : number = 150.0
+    public Bottom : number = 40.0
     
     @property(BattleUI)
     m_BattleUI: BattleUI = null;
@@ -48,6 +54,9 @@ export class LevelSceneLogic extends Component {
     @property(PlayerNPCCtrl)
     m_PlayerNPCCtrl: PlayerNPCCtrl = null;
 
+    @property(UITransform)
+    m_Canvas: UITransform = null;
+
     m_PlayerNPCs:PlayerNPCCtrl[] = [];
     
     m_LevelState:LevelState = LevelState.Ready;
@@ -55,7 +64,8 @@ export class LevelSceneLogic extends Component {
 
     private m_GameTime:number = 100;
 
-
+    @property(Camera)
+    m_Camera: Camera = null;
 
 
     public m_PlayerData:PlayerData = null;
@@ -143,6 +153,30 @@ export class LevelSceneLogic extends Component {
         return Math.floor(this.m_GameTime);
     }
 
+    public GetLevelUpProgess(): number {
+        let curPhase = this.m_PlayerUserCtrl.GetCurPhase()
+        
+        let LastValue = 0
+        let CurValue = this.m_PlayerUserCtrl.m_next_values[curPhase]
+        if(curPhase > 0)
+        {
+            LastValue = this.m_PlayerUserCtrl.m_next_values[curPhase - 1]
+        }
+        let Value = this.m_PlayerUserCtrl.GetValue()
+        let totalLen = CurValue - LastValue
+        
+        if (totalLen != 0)
+        {
+            
+            return Value / totalLen
+        }
+        else
+        {
+
+            return 1.0
+        }
+    }
+
     //设置关卡目标
     public SetLevelGoal()
     {
@@ -188,10 +222,13 @@ export class LevelSceneLogic extends Component {
         for(let i = 0; i < MyLevelPlayers.m_LevelPlayer.length; ++i)
         {
             const NewNode = instantiate(this.m_PlayerNPCCtrl.node);
+            
             NewNode.active = true;
             NewNode.parent = director.getScene();
             let MyPlayerCtrl = NewNode.getComponent(PlayerNPCCtrl)
             MyPlayerCtrl.SetName(MyLevelPlayers.m_LevelPlayer[i].m_PlayerName);
+            let NodeName = this.m_BattleUI.CreateName(MyLevelPlayers.m_LevelPlayer[i].m_PlayerName);
+            MyPlayerCtrl.m_NameNode = NodeName;
             //MyPlayerCtrl.SetValue(0);
             MyPlayerCtrl.SetValue(MyLevelPlayers.m_LevelPlayer[i].m_PlayerValue);
             let x = (Math.random() - 0.5) * 80.0

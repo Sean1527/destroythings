@@ -70,7 +70,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 3575
+      "__id__": 3579
     },
     "_id": "7d4e32cf-7b22-4ae0-b964-27952d86ba5a"
   },
@@ -1726,6 +1726,8 @@
     "m_ReadyUI": null,
     "m_PlayerUserCtrl": null,
     "m_PlayerNPCCtrl": null,
+    "m_Canvas": null,
+    "m_Camera": null,
     "_id": "feY0RKTDlE77fd086oep6H"
   },
   {
@@ -53439,6 +53441,12 @@
       },
       {
         "__id__": 3573
+      },
+      {
+        "__id__": 3575
+      },
+      {
+        "__id__": 3577
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -54814,24 +54822,68 @@
     ]
   },
   {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 99
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "m_Camera"
+    ],
+    "target": {
+      "__id__": 35
+    },
+    "targetInfo": {
+      "__id__": 3576
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "08qedqOQ1Evr5dTgIhOMXK"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 99
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "m_Canvas"
+    ],
+    "target": {
+      "__id__": 45
+    },
+    "targetInfo": {
+      "__id__": 3578
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "41LJiUCZZEI4Ory1kXUIS4"
+    ]
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 3576
-    },
-    "shadows": {
-      "__id__": 3577
-    },
-    "_skybox": {
-      "__id__": 3578
-    },
-    "fog": {
-      "__id__": 3579
-    },
-    "octree": {
       "__id__": 3580
     },
-    "lightProbeInfo": {
+    "shadows": {
       "__id__": 3581
+    },
+    "_skybox": {
+      "__id__": 3582
+    },
+    "fog": {
+      "__id__": 3583
+    },
+    "octree": {
+      "__id__": 3584
+    },
+    "lightProbeInfo": {
+      "__id__": 3585
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

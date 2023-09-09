@@ -21,13 +21,16 @@ export class PlayerCtrl extends Component {
 
     protected m_cur_value:number = 0;
 
-    protected m_next_values:number[] = [10.0, 15.0, 20.0, 40,0];
+    public m_next_values:number[] = [10.0, 15.0, 20.0, 40,0];
 
     protected m_PlayerName:string = "";
 
     protected m_Direction:Vec3 = new Vec3(0,0,0);
 
     private targetState:number = constant.TARGETSTATE.IDLE;
+
+    @property(Node)
+    m_NameNode: Node = null;
 
 
     start () 
@@ -43,6 +46,47 @@ export class PlayerCtrl extends Component {
         const displacement = new Vec3();
         Vec3.multiplyScalar(displacement, this.m_Direction, deltaTime);
         this.node.translate(displacement);
+
+
+        let pos = this.node.getPosition();
+
+
+        if(this.m_PlayerName == "Player")
+            console.log(pos.z)
+        if (pos.x < LevelSceneLogic.GetInstance().Left) {
+            pos.x = LevelSceneLogic.GetInstance().Left
+        }
+        if (pos.x > LevelSceneLogic.GetInstance().Right) {
+            pos.x = LevelSceneLogic.GetInstance().Right
+        }
+        if (pos.z < LevelSceneLogic.GetInstance().Bottom) {
+            pos.z = LevelSceneLogic.GetInstance().Bottom
+        }
+        if (pos.z > LevelSceneLogic.GetInstance().Top) {
+            pos.z = LevelSceneLogic.GetInstance().Top
+        }
+        this.node.position = pos
+
+        if(this.m_NameNode != null)
+        {
+            // Find the Camera component that renders your 3D object
+            const camera = LevelSceneLogic.GetInstance().m_Camera;
+            const canvas = LevelSceneLogic.GetInstance().m_Canvas;
+
+            // Declare a variable to hold the screen position
+            const screenPos = new Vec3();
+
+            // Transform world position to camera screen space
+            camera.worldToScreen(this.node.getWorldPosition(), screenPos);
+
+            // Find the Canvas node, which should be the parent of your UI elements
+
+            // Convert screen position to UI local position
+            const uiPosition = canvas.convertToNodeSpaceAR(new Vec3(screenPos.x, screenPos.y, 0));
+            this.m_NameNode.position = uiPosition
+        }
+        
+
     }
 
 

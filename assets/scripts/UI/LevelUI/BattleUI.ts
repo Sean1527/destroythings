@@ -1,4 +1,4 @@
-import { _decorator, Component, instantiate, Label, Node } from 'cc';
+import { _decorator, Component, instantiate, Label, Node, ProgressBar } from 'cc';
 import { LevelSceneLogic } from '../../LevelSceneLogic';
 const { ccclass, property } = _decorator;
 
@@ -19,11 +19,38 @@ export class BattleUI extends Component {
     @property(Node)
     m_RankNodeTemplate: Node = null;
 
+    @property(ProgressBar)
+    m_LevelUpProgress: ProgressBar = null;
+
+    @property(Label)
+    m_PlayerName: Label = null;
+
+    @property(Node)
+    m_NameNodes: Node = null;
+
+    @property(Label)
+    m_NameNodeTemplate: Label = null;
+
+
     m_RankNodes:Node[] = [];
     m_RankLabels:Label[] = [];
+
+    m_Init:boolean = false;
     start() {
 
+
+        
     }
+
+    
+    public CreateName(Name : string ): Node 
+    {
+        const NewNode = instantiate(this.m_NameNodeTemplate.node);
+        NewNode.getComponent(Label).string = Name
+        NewNode.parent = this.m_NameNodes;
+        return NewNode
+    }
+
     
 
     public padWithZero(number: number): string 
@@ -41,8 +68,17 @@ export class BattleUI extends Component {
 
 
     update(deltaTime: number) {
+
+        if(this.m_Init == false)
+        {
+            this.m_PlayerName.string = LevelSceneLogic.GetInstance().m_PlayerData.Name
+            this.m_Init = true;
+        }
+
         let TimeLeft = LevelSceneLogic.GetInstance().GetGameTimeLeft();
         this.m_TimerText.string = this.intToTimeString(TimeLeft);
+
+        this.m_LevelUpProgress.progress = LevelSceneLogic.GetInstance().GetLevelUpProgess();
         
     }
 

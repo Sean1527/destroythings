@@ -39,23 +39,6 @@
       ],
       "subMetas": {}
     },
-    "959f8": {
-      "importer": "gltf-embeded-image",
-      "uuid": "ba6289bc-d60b-4795-91eb-c3e295e52df7@959f8",
-      "displayName": "",
-      "id": "959f8",
-      "name": "skyBox1.png.image",
-      "userData": {
-        "gltfIndex": 0
-      },
-      "ver": "1.0.3",
-      "imported": true,
-      "files": [
-        ".json",
-        ".png"
-      ],
-      "subMetas": {}
-    },
     "ae49a": {
       "importer": "texture",
       "uuid": "ba6289bc-d60b-4795-91eb-c3e295e52df7@ae49a",
@@ -70,7 +53,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ba6289bc-d60b-4795-91eb-c3e295e52df7@959f8"
+        "imageUuidOrDatabaseUri": "ba6289bc-d60b-4795-91eb-c3e295e52df7@89858"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -99,8 +82,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "skyBox1.png",
-        "uri": "ba6289bc-d60b-4795-91eb-c3e295e52df7@959f8"
+        "name": "skyBox",
+        "uri": "ba6289bc-d60b-4795-91eb-c3e295e52df7@89858"
       }
     ],
     "legacyFbxImporter": true,
