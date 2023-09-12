@@ -157,7 +157,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 42.26,
+      "width": 80,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -187,12 +187,12 @@
     "_dstBlendFactor": 4,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 68,
+      "g": 225,
       "b": 255,
       "a": 255
     },
-    "_string": "label",
+    "_string": "我的名字",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -205,7 +205,7 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_isItalic": false,
-    "_isBold": false,
+    "_isBold": true,
     "_isUnderline": false,
     "_underlineHeight": 2,
     "_cacheMode": 0,

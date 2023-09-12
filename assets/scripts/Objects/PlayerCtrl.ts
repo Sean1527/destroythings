@@ -1,4 +1,4 @@
-import { _decorator, BoxCollider, Component, ITriggerEvent, Label, Node, Vec3 } from 'cc';
+import { _decorator, BoxCollider, Component, ITriggerEvent, Label, Node, Vec2, Vec3 } from 'cc';
 import { TargetCtrl } from './TargetCtrl';
 import { LevelSceneLogic } from '../LevelSceneLogic';
 import { constant } from '../framework/constant';
@@ -32,6 +32,8 @@ export class PlayerCtrl extends Component {
     @property(Node)
     m_NameNode: Node = null;
 
+    @property(Node)
+    m_namePos: Node = null;
 
     start () 
     {
@@ -77,12 +79,14 @@ export class PlayerCtrl extends Component {
             const screenPos = new Vec3();
 
             // Transform world position to camera screen space
-            camera.worldToScreen(this.node.getWorldPosition(), screenPos);
+            // Pcamera.worldToScreen(this.m_namePos.getWorldPosition(), screenPos);
 
-            // Find the Canvas node, which should be the parent of your UI elements
+            // // Find the Canvas node, which should be the parent of your UI elements
 
-            // Convert screen position to UI local position
-            const uiPosition = canvas.convertToNodeSpaceAR(new Vec3(screenPos.x, screenPos.y, 0));
+            // // Convert screen position to UI local position
+            // const uiosition = canvas.convertToNodeSpaceAR(new Vec3(screenPos.x, screenPos.y, 0));
+            const uiPosition = new Vec3();
+            camera.convertToUINode(this.m_namePos.getWorldPosition(), this.m_NameNode.parent!,uiPosition);
             this.m_NameNode.position = uiPosition
         }
         
@@ -175,7 +179,7 @@ export class PlayerCtrl extends Component {
     }
 
 
-    private GetCurPhase():number
+    public GetCurPhase():number
     {
         for(let i = 0; i < this.m_next_values.length; ++i)
         {

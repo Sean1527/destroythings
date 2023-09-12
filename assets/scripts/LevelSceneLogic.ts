@@ -26,11 +26,11 @@ enum LevelState {
 export class LevelSceneLogic extends Component {
 
     public static instance:LevelSceneLogic = null;
-
-    public Left : number = -50.0
-    public Right : number = 50.0
-    public Top : number = 150.0
-    public Bottom : number = 40.0
+    //地图的碰撞边界
+    public Left : number = -100.0
+    public Right : number = 100.0
+    public Top : number = 100.0
+    public Bottom : number = -100.0
     
     @property(BattleUI)
     m_BattleUI: BattleUI = null;
