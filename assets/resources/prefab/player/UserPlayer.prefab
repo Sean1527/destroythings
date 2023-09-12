@@ -628,9 +628,11 @@
       "__id__": 30
     },
     "m_isUser": true,
+    "m_TipsNode": null,
+    "m_LevelTipsNode": null,
     "m_Speed": 5,
-    "PlayerObj": {
-      "__id__": 2
+    "CameraObj": {
+      "__id__": 10
     },
     "m_TextLabel": null,
     "m_LevelSceneLogic": null,

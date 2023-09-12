@@ -19,7 +19,7 @@ export class PlayerCtrl extends Component {
     m_Speed:number = 5.0; // you can adjust this value to set the speed of the node
 
     @property(Node)
-    PlayerObj: Node = null;
+    CameraObj: Node = null;
 
     @property(Label)
     m_TextLabel: Label = null;
@@ -78,6 +78,7 @@ export class PlayerCtrl extends Component {
         }
         this.node.position = pos
 
+        //名字跟随角色移动
         if(this.m_NameNode != null)
         {
             // Find the Camera component that renders your 3D object
@@ -170,6 +171,7 @@ export class PlayerCtrl extends Component {
         this.node.getComponent(BoxCollider).enabled = false;
         this.node.setParent(player);
         this.node.setPosition(0,0.2,0);
+        this.m_NameNode.active = false;//隐藏名字和血条
         
          
         setTimeout(() => {
@@ -231,8 +233,12 @@ export class PlayerCtrl extends Component {
     private Upgrade(phase:number)
     {
         console.log("Upgrade");
-        this.PlayerObj.setScale(new Vec3(1.0 + phase * 0.2, 1.0 + phase * 0.2, 1.0 + phase * 0.2))
         this.node.setScale(new Vec3(1.0 + phase * 0.2, 1.0 + phase * 0.2, 1.0 + phase * 0.2))
+        if (this.m_isUser) {
+            //角色的相机额外抬高一些，其实最好有缓动效果
+            this.CameraObj.setScale(new Vec3(1.0 + phase * 0.1, 1.0 + phase * 0.1, 1.0 + phase * 0.1))
+        }
+       
         //this.m_PlayerData.Level += phase;
     }
     

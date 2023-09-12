@@ -70,7 +70,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 3606
+      "__id__": 3609
     },
     "_id": "7d4e32cf-7b22-4ae0-b964-27952d86ba5a"
   },
@@ -53483,6 +53483,9 @@
       },
       {
         "__id__": 3603
+      },
+      {
+        "__id__": 3606
       }
     ],
     "nestedPrefabInstanceRoots": [
@@ -54721,8 +54724,7 @@
   {
     "__type__": "cc.TargetInfo",
     "localID": [
-      "14WKlhYYtG97xsLnz7Rp+o",
-      "51L5P+adlMEIoguB/pArJS"
+      "11isiby5RIA6BB3GcP+qwV"
     ]
   },
   {
@@ -55151,24 +55153,54 @@
     ]
   },
   {
-    "__type__": "cc.SceneGlobals",
-    "ambient": {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 35
+    },
+    "sourceInfo": {
       "__id__": 3607
     },
-    "shadows": {
+    "propertyPath": [
+      "CameraObj"
+    ],
+    "target": {
+      "__id__": 35
+    },
+    "targetInfo": {
       "__id__": 3608
-    },
-    "_skybox": {
-      "__id__": 3609
-    },
-    "fog": {
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "58MiP8GadHIpKxpcn4WRqs"
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "11isiby5RIA6BB3GcP+qwV"
+    ]
+  },
+  {
+    "__type__": "cc.SceneGlobals",
+    "ambient": {
       "__id__": 3610
     },
-    "octree": {
+    "shadows": {
       "__id__": 3611
     },
-    "lightProbeInfo": {
+    "_skybox": {
       "__id__": 3612
+    },
+    "fog": {
+      "__id__": 3613
+    },
+    "octree": {
+      "__id__": 3614
+    },
+    "lightProbeInfo": {
+      "__id__": 3615
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

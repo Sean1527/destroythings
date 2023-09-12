@@ -1179,10 +1179,11 @@
     "__prefab": {
       "__id__": 74
     },
+    "m_isUser": false,
+    "m_TipsNode": null,
+    "m_LevelTipsNode": null,
     "m_Speed": 5,
-    "PlayerObj": {
-      "__id__": 2
-    },
+    "CameraObj": null,
     "m_TextLabel": null,
     "m_LevelSceneLogic": null,
     "m_NameNode": null,
