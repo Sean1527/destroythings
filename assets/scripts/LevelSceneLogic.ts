@@ -162,7 +162,7 @@ export class LevelSceneLogic extends Component {
         {
             LastValue = this.m_PlayerUserCtrl.m_next_values[curPhase - 1]
         }
-        let Value = this.m_PlayerUserCtrl.GetValue()
+        let Value = this.m_PlayerUserCtrl.GetValue() - LastValue
         let totalLen = CurValue - LastValue
         
         if (totalLen != 0)

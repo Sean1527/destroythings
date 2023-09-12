@@ -1,4 +1,4 @@
-import { _decorator, BoxCollider, Component, ITriggerEvent, Label, Node, Vec2, Vec3 } from 'cc';
+import { _decorator, Animation, BoxCollider, Component, ITriggerEvent, Label, Node, Vec2, Vec3 } from 'cc';
 import { TargetCtrl } from './TargetCtrl';
 import { LevelSceneLogic } from '../LevelSceneLogic';
 import { constant } from '../framework/constant';
@@ -6,7 +6,15 @@ const { ccclass, property } = _decorator;
 
 @ccclass('PlayerCtrl')
 export class PlayerCtrl extends Component {
-    
+    @property(Boolean)
+    m_isUser: Boolean = false;
+
+    @property(Node)
+    m_TipsNode: Node = null;
+
+    @property(Node)
+    m_LevelTipsNode: Node = null;
+
     @property
     m_Speed:number = 5.0; // you can adjust this value to set the speed of the node
 
@@ -34,6 +42,7 @@ export class PlayerCtrl extends Component {
 
     @property(Node)
     m_namePos: Node = null;
+
 
     start () 
     {
@@ -198,13 +207,24 @@ export class PlayerCtrl extends Component {
 
     public AddValueAndGrow(value:number)
     {
+        let ani = this.m_TipsNode.getComponent(Animation);
+        let tipsLab = this.m_TipsNode.getComponent(Label);
         //this.m_PlayerData.ExperiencePoints += value;
         let phase_cur = this.GetCurPhase();
         this.m_cur_value += value;
+        if (this.m_isUser) {
+            tipsLab.string = "+ " + value.toString();
+            ani.play();
+        }
         let phase_next = this.GetCurPhase();
         if(phase_next != phase_cur)
         {
             this.Upgrade(phase_next);
+
+            let ani1 = this.m_LevelTipsNode.getComponent(Animation);
+            if (this.m_isUser) {
+                ani1.play();
+            }
         }
     }
 

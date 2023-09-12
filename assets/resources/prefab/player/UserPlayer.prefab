@@ -627,6 +627,7 @@
     "__prefab": {
       "__id__": 30
     },
+    "m_isUser": true,
     "m_Speed": 5,
     "PlayerObj": {
       "__id__": 2

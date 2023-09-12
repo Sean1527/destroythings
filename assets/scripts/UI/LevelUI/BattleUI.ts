@@ -31,6 +31,8 @@ export class BattleUI extends Component {
     @property(Label)
     m_NameNodeTemplate: Label = null;
 
+    @property(Label)
+    m_tips: Label = null;
 
     m_RankNodes:Node[] = [];
     m_RankLabels:Label[] = [];
