@@ -329,7 +329,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 244.02299999999997,
+      "y": 350,
       "z": 0
     },
     "_lrot": {
@@ -401,7 +401,7 @@
       "r": 247,
       "g": 140,
       "b": 238,
-      "a": 38
+      "a": 0
     },
     "_string": "等级提升",
     "_horizontalAlign": 1,
@@ -469,7 +469,7 @@
     "_target": null,
     "_left": 0,
     "_right": 0,
-    "_top": 382.65700000000004,
+    "_top": 276.68,
     "_bottom": 753.633,
     "_horizontalCenter": 0,
     "_verticalCenter": 126.953,
