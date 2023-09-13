@@ -401,7 +401,7 @@
       "r": 247,
       "g": 140,
       "b": 238,
-      "a": 255
+      "a": 38
     },
     "_string": "等级提升",
     "_horizontalAlign": 1,
@@ -903,7 +903,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
+      "width": 20,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -938,7 +938,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "我的名字",
+    "_string": "我",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -1004,7 +1004,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -335,
-      "y": 502.67499999999995,
+      "y": 560.3129999999999,
       "z": 0
     },
     "_lrot": {
@@ -1366,7 +1366,7 @@
     "_target": null,
     "_left": 40,
     "_right": 0,
-    "_top": 114.32500000000005,
+    "_top": 56.68700000000007,
     "_bottom": 0,
     "_horizontalCenter": 0,
     "_verticalCenter": 0,
@@ -1414,7 +1414,7 @@
         "__id__": 71
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 79
@@ -1853,7 +1853,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 335,
+      "x": 343,
       "y": 586.548,
       "z": 0
     },
@@ -1895,7 +1895,7 @@
         "__id__": 92
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 100
@@ -1910,7 +1910,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -83.875,
-      "y": -22,
+      "y": -23,
       "z": 0
     },
     "_lrot": {
@@ -2355,7 +2355,7 @@
     "_alignFlags": 33,
     "_target": null,
     "_left": 0,
-    "_right": 40,
+    "_right": 32,
     "_top": 80.452,
     "_bottom": 0,
     "_horizontalCenter": 0,
@@ -2397,7 +2397,7 @@
     "_startAxis": 0,
     "_paddingLeft": 0,
     "_paddingRight": 0,
-    "_paddingTop": 0,
+    "_paddingTop": 1,
     "_paddingBottom": 0,
     "_spacingX": 0,
     "_spacingY": 10,
@@ -3278,7 +3278,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 153

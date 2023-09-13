@@ -7,8 +7,8 @@ const { ccclass, property } = _decorator;
 
 @ccclass('PlayerCtrl')
 export class PlayerCtrl extends Component {
-    @property(Boolean)
-    m_isUser: Boolean = false;
+    @property()
+    m_isUser = false;
 
     @property(Node)
     m_TipsNode: Node = null;
@@ -267,5 +267,10 @@ export class PlayerCtrl extends Component {
     public GetValue():number
     {
         return this.m_cur_value
+    }
+    
+    public GetType():boolean
+    {
+        return this.m_isUser;
     }
 }

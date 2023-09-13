@@ -1,10 +1,11 @@
-import { _decorator, Component, instantiate, Label, Node, ProgressBar } from 'cc';
+import { _decorator, color, Component, instantiate, Label, Node, ProgressBar, UITransform } from 'cc';
 import { LevelSceneLogic } from '../../LevelSceneLogic';
 const { ccclass, property } = _decorator;
 
 interface ScoreEntry {
     name: string;
     score: number;
+    isMe: boolean;
 }
 
 @ccclass('BattleUI')
@@ -83,7 +84,10 @@ export class BattleUI extends Component {
         this.m_LevelUpProgress.progress = LevelSceneLogic.GetInstance().GetLevelUpProgess();
         
     }
-
+    /**
+     * 更新排行榜
+     * @param MyLevelSceneLogic 
+     */
     public UpdateRank(MyLevelSceneLogic:LevelSceneLogic)
     {
         let scoreArray: ScoreEntry[] = []
@@ -91,7 +95,8 @@ export class BattleUI extends Component {
         {
             let NPCPlayer: ScoreEntry = {
                 name:MyLevelSceneLogic.m_Players[i].GetName(),
-                score:MyLevelSceneLogic.m_Players[i].GetValue()
+                score:MyLevelSceneLogic.m_Players[i].GetValue(),
+                isMe:MyLevelSceneLogic.m_Players[i].GetType()
             };
             scoreArray.push(NPCPlayer)
         }
@@ -102,17 +107,30 @@ export class BattleUI extends Component {
             for(let i = 0; i < scoreArray.length; ++i)
             {
                 const NewNode = instantiate(this.m_RankNodeTemplate);
-                NewNode.active = true;
+                if (i<= 3) {
+                    NewNode.active = true;//仅显示前三名
+                }
+                
                 NewNode.parent = this.m_RankNodeTemplate.parent;
                 let NodeChild = NewNode.getChildByName("text-001");
                 let LabelNew = NodeChild.getComponent(Label);
                 this.m_RankLabels.push(LabelNew);
                 this.m_RankNodes.push(NewNode);
+              
             }
         }
         for(let i = 0; i < scoreArray.length; ++i)
         {
-            this.m_RankLabels[i].string = scoreArray[i].name + " " +  scoreArray[i].score
+            let r = i + 1;
+            //根据排名写入内容，且如果是玩家自己则颜色不同
+            
+            if (scoreArray[i].isMe) {
+                this.m_RankLabels[i].color.set(0,255,255,255);
+                this.m_RankLabels[i].string = r + "  " + "我" + " - " +  scoreArray[i].score + "分";
+            } else {
+                this.m_RankLabels[i].color.set(255,255,255,255);
+                this.m_RankLabels[i].string = r + "  " + scoreArray[i].name + " - " +  scoreArray[i].score + "分";
+            }
         }
     }
 
