@@ -1642,7 +1642,7 @@
     "propertyPath": [
       "playOnLoad"
     ],
-    "value": true
+    "value": false
   },
   {
     "__type__": "cc.TargetInfo",

@@ -2,6 +2,7 @@ import { _decorator, Animation, BoxCollider, Component, ITriggerEvent, Label, No
 import { TargetCtrl } from './TargetCtrl';
 import { LevelSceneLogic } from '../LevelSceneLogic';
 import { constant } from '../framework/constant';
+import { AudioMgr } from '../framework/AudioMgr';
 const { ccclass, property } = _decorator;
 
 @ccclass('PlayerCtrl')
@@ -233,12 +234,13 @@ export class PlayerCtrl extends Component {
     private Upgrade(phase:number)
     {
         console.log("Upgrade");
-        this.node.setScale(new Vec3(1.0 + phase * 0.2, 1.0 + phase * 0.2, 1.0 + phase * 0.2))
+        this.node.setScale(new Vec3(1.0 + phase * 0.35, 1.0 + phase * 0.35, 1.0 + phase * 0.35))
         if (this.m_isUser) {
             //角色的相机额外抬高一些，其实最好有缓动效果
-            this.CameraObj.setScale(new Vec3(1.0 + phase * 0.1, 1.0 + phase * 0.1, 1.0 + phase * 0.1))
+            // this.CameraObj.setScale(new Vec3(1.0 - phase * 0.05, 1.0 - phase * 0.05, 1.0 - phase * 0.05))
         }
-       
+        //播放升级音效
+        AudioMgr.inst.playOneShot("levelUp",1);
         //this.m_PlayerData.Level += phase;
     }
     
