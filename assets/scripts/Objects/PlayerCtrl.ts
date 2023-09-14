@@ -1,4 +1,4 @@
-import { _decorator, Animation, BoxCollider, Component, ITriggerEvent, Label, Node, Vec2, Vec3 } from 'cc';
+import { _decorator, absMax, Animation, BoxCollider, Component, ITriggerEvent, Label, Node, Vec2, Vec3 } from 'cc';
 import { TargetCtrl } from './TargetCtrl';
 import { LevelSceneLogic } from '../LevelSceneLogic';
 import { constant } from '../framework/constant';
@@ -30,13 +30,15 @@ export class PlayerCtrl extends Component {
 
     protected m_cur_value:number = 0;
 
-    public m_next_values:number[] = [10.0, 15.0, 20.0, 40,0];
+    public m_next_values:number[] = [3.0, 8.0, 15.0, 20,0];
 
     protected m_PlayerName:string = "";
 
     protected m_Direction:Vec3 = new Vec3(0,0,0);
 
     private targetState:number = constant.TARGETSTATE.IDLE;
+    
+    
 
     @property(Node)
     m_NameNode: Node = null;// 在levelSceneLogic里创建npc时会赋值成新创建的节点，如果是玩家的话则用当前绑定的节点
@@ -101,7 +103,7 @@ export class PlayerCtrl extends Component {
             this.m_NameNode.position = uiPosition
         }
         
-
+      
     }
 
 
@@ -117,7 +119,7 @@ export class PlayerCtrl extends Component {
     // }
 
     /** 
-     * 根据相对距离判断是否能吞噬目标，并调用相应的反馈
+     * 根据相对距离判断是否能吞噬目标（玩家或物品），并调用相应的反馈
      */
     private onTriggerStay (event: ITriggerEvent)
     {
@@ -133,30 +135,55 @@ export class PlayerCtrl extends Component {
             //计算吞噬距离
             let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
             let targetRadius =ndTarget.scale.x * ndTarget.getComponent(BoxCollider).size.x;
-            let eatDistance = myRadius - targetRadius;
+            let eatDistance = myRadius - targetRadius; //可吃掉目标的距离，如果小于0则不能吃
+            let scareDistance = myRadius + targetRadius;
 
-            let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
-
-            //判断碰撞盒大小比，根据比值判断能否有反馈以及反馈的程度
-
-
-            
-            // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
-            if (eatRatio >= 1) {
+            //如果比对方半径大且两者距离小于半径差则可吞噬目标
+            if (curDistance <= eatDistance && eatDistance >0) {
                 target_ctrl.EatTarget(this.node,this)
-            }else{
-                //如果需要根据吞噬程度来控制动画的播放程度可以再继续细分情况
+            }
+            else if(curDistance < scareDistance){
+                //如果小于半径和，则目标惊吓
                 target_ctrl.ScareTarget();
             }
+            
+
+            // let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
+            // // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
+            // if (eatRatio >= 1) {
+            //     target_ctrl.EatTarget(this.node,this)
+            // }else{
+            //     //如果需要根据吞噬程度来控制动画的播放程度可以再继续细分情况
+            //     target_ctrl.ScareTarget();
+            // }
         }
 
-        //如果等级比目标的高则吞噬目标
+
+
+        //角色间的吞噬逻辑
         let player_ctrl = ndTarget.getComponent(PlayerCtrl);
         if(player_ctrl != null)
         {
-            if(this.GetCurPhase() > player_ctrl.GetCurPhase())
-            {
-                player_ctrl.EatTarget(this.node,this)
+            //计算当前距离
+            let dx = this.node.position.x -ndTarget.worldPosition.x;
+            let dz = this.node.position.z -ndTarget.worldPosition.z;
+            let curDistance = Math.sqrt(dx*dx + dz*dz);
+            //计算吞噬距离
+            let myRadius =this.node.scale.x * this.node.getComponent(BoxCollider).size.x;
+            let targetRadius =ndTarget.scale.x * ndTarget.getComponent(BoxCollider).size.x;
+            let eatDistance = myRadius - targetRadius; //可吃掉目标的距离，如果小于0则不能吃
+            let scareDistance = myRadius + targetRadius;
+
+            //如果两者距离小于半径差且等级高于对方
+            if (curDistance <= eatDistance && this.GetCurPhase() > player_ctrl.GetCurPhase()) {
+                if (player_ctrl.m_isUser && LevelSceneLogic.GetInstance().InvincibleTime === 0) {
+                    ndTarget.active = false;//玩家死亡时直接隐藏节点，复活时恢复
+                    LevelSceneLogic.instance.LoseLevel();
+
+                } else {
+                    player_ctrl.EatTarget(this.node,this);//对方调用被吃掉的逻辑
+                }
+                
             }
            
         }

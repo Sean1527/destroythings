@@ -69,7 +69,7 @@ export class LevelSceneLogic extends Component {
 
 
     public m_PlayerData:PlayerData = null;
-
+    public InvincibleTime = 0;//无敌时间
 
 
 
@@ -105,8 +105,11 @@ export class LevelSceneLogic extends Component {
 
         // 持续时间
         if(this.m_LevelState == LevelState.Playing)
-        {
+        {   
+            //更新关卡持续时间
             this.m_CurLevelGoalValue.m_TimeValue += deltaTime;
+            //更新无敌时间
+            this.InvincibleTime = Math.max(this.InvincibleTime - deltaTime ,0);
         }
         
         // 更新关卡目标分数和倒计时并在倒计时结束时判定胜负
@@ -255,12 +258,14 @@ export class LevelSceneLogic extends Component {
     public ReviveLevel()
     {
         this.m_LevelState = LevelState.Playing;
-        this.m_CurLevelGoalValue.m_TimeValue = 0;
+        this.m_CurLevelGoalValue.m_TimeValue = 0;//重置持续时间
         this.m_ReadyUI.node.active = false;
         this.m_BattleUI.node.active = true;
         this.m_LoseUI.node.active = false;
         this.m_WinUI.node.active = false;
         //this.m_ReviveUI.node.active = false;
+        this.InvincibleTime = 5; //复活后5秒无敌
+        this.m_PlayerUserCtrl.node.active = true; //显示角色
     }
 
     public LoseLevel()
@@ -293,7 +298,6 @@ export class LevelSceneLogic extends Component {
     {
         return this.m_LevelState;
     }
-
 
 
     public OnVideoEndRevive(res) {

@@ -2,6 +2,7 @@ import { _decorator, EventTouch, Node, Vec3} from 'cc';
 import { PlayerCtrl } from './PlayerCtrl';
 import { UserData } from '../UserData/UserData';
 import { GameMain } from '../GameMain';
+import { LevelSceneLogic } from '../LevelSceneLogic';
 const { ccclass, property } = _decorator;
 
 @ccclass('PlayerUserCtrl')
@@ -56,7 +57,11 @@ export class PlayerUserCtrl extends PlayerCtrl {
     }
 
     update (deltaTime: number) 
-    {
+    {   
         super.update(deltaTime);
+        //仅playing状态可移动
+        if (LevelSceneLogic.GetInstance().GetLevelState() !== 1) { 
+            this.m_PressStarPoint = this.m_Direction = new Vec3(0,0,0);
+        }
     }
 }
