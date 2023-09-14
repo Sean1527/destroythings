@@ -27,10 +27,10 @@ export class BattleUI extends Component {
     m_PlayerName: Label = null;
 
     @property(Node)
-    m_NameNodes: Node = null;
+    m_NameNodes: Node = null;// npc名称的父节点
 
     @property(Label)
-    m_NameNodeTemplate: Label = null;
+    m_NameNodeTemplate: Label = null; //创建名称的模板
 
     @property(Label)
     m_tips: Label = null;
@@ -45,7 +45,11 @@ export class BattleUI extends Component {
         
     }
 
-    
+    /**
+     * 为角色创建名称ui节点
+     * @param Name 
+     * @returns 
+     */
     public CreateName(Name : string ): Node 
     {
         const NewNode = instantiate(this.m_NameNodeTemplate.node);

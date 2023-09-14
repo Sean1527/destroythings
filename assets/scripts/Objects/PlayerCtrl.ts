@@ -39,7 +39,7 @@ export class PlayerCtrl extends Component {
     private targetState:number = constant.TARGETSTATE.IDLE;
 
     @property(Node)
-    m_NameNode: Node = null;
+    m_NameNode: Node = null;// 在levelSceneLogic里创建npc时会赋值成新创建的节点，如果是玩家的话则用当前绑定的节点
 
     @property(Node)
     m_namePos: Node = null;

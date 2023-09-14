@@ -216,7 +216,10 @@ export class LevelSceneLogic extends Component {
         this.m_Players.push(this.m_PlayerUserCtrl);
         //throw new Error('Method not implemented.');
     }
-
+    
+    /**
+     * 创建npc，同时会创建其名称节点
+     */
     public CreateLevelPlayerNPCs() {
         let MyLevelPlayers = LevelPlayersManager.GetInstance().GetRandomLevelPlayers();
         for(let i = 0; i < MyLevelPlayers.m_LevelPlayer.length; ++i)
