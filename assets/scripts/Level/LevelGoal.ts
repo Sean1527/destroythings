@@ -84,7 +84,12 @@ export class LevelGoalManager
             
         return false;
     }   
-
+    /**
+     * 判断倒计时是否结束
+     * @param CurLevelGoal 
+     * @param CurLevelGoalValue 
+     * @returns 
+     */
     public CheckTimesUp(CurLevelGoal:LevelGoal, CurLevelGoalValue:LevelGoal):boolean
     {
         if(CurLevelGoal.m_TimeValue > 0 && CurLevelGoal.m_TimeValue <= CurLevelGoalValue.m_TimeValue)

@@ -150,10 +150,11 @@ export class PlayerCtrl extends Component {
             }
         }
 
+        //如果等级比目标的高则吞噬目标
         let player_ctrl = ndTarget.getComponent(PlayerCtrl);
         if(player_ctrl != null)
         {
-            if(this.GetCurValue() > player_ctrl.GetCurValue())
+            if(this.GetCurPhase() > player_ctrl.GetCurPhase())
             {
                 player_ctrl.EatTarget(this.node,this)
             }

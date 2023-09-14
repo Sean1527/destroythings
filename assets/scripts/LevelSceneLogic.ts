@@ -73,9 +73,10 @@ export class LevelSceneLogic extends Component {
 
 
 
-    //关卡目标
+    /**关卡的目标分数和时间  */
     public m_CurLevelGoal:LevelGoal = null;
-    //当前关目标卡值
+
+    /**当前的分数和时间*/
     public m_CurLevelGoalValue:LevelGoal = null;
 
 
@@ -101,12 +102,14 @@ export class LevelSceneLogic extends Component {
         
 
         this.m_BattleUI.UpdateRank(this);
+
+        // 持续时间
         if(this.m_LevelState == LevelState.Playing)
         {
             this.m_CurLevelGoalValue.m_TimeValue += deltaTime;
         }
         
-        
+        // 更新关卡目标分数和倒计时并在倒计时结束时判定胜负
         if(this.m_LevelState == LevelState.Playing)
         {
             this.m_CurLevelGoalValue.m_ScoreValue = this.m_PlayerUserCtrl.GetValue();
@@ -116,17 +119,23 @@ export class LevelSceneLogic extends Component {
                 let bTimesUp = LevelGoalManager.GetInstance().CheckTimesUp(this.m_CurLevelGoal, this.m_CurLevelGoalValue);
                 if(bTimesUp)
                 {
-                    let bWin = LevelGoalManager.GetInstance().CheckGoal(this.m_CurLevelGoal, this.m_CurLevelGoalValue);
-                    if(bWin)
-                    {
-                        console.log("WinLevel")
-                        this.WinLevel();
-                    }
-                    else
-                    {
-                        console.log("LoseLevel")
-                        this.LoseLevel();
-                    }
+                //新方案————倒计时结束就胜利
+                    console.log("WinLevel")
+                    this.WinLevel();
+
+                //旧方案————根据分数判断胜负
+                    // let bWin = LevelGoalManager.GetInstance().CheckGoal(this.m_CurLevelGoal, this.m_CurLevelGoalValue);
+                    // if(bWin)
+                    // {
+                    //     console.log("WinLevel")
+                    //     this.WinLevel();
+                    // }
+                    // else
+                    // {
+                    //     console.log("LoseLevel")
+                    //     this.LoseLevel();
+                    // }
+                    
                 }
             }
         }
@@ -216,7 +225,7 @@ export class LevelSceneLogic extends Component {
         this.m_Players.push(this.m_PlayerUserCtrl);
         //throw new Error('Method not implemented.');
     }
-    
+
     /**
      * 创建npc，同时会创建其名称节点
      */
