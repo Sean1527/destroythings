@@ -147,7 +147,6 @@ export class PlayerCtrl extends Component {
                 target_ctrl.ScareTarget();
             }
             
-
             // let eatRatio = Math.max(0,(myRadius + targetRadius - curDistance)/ (targetRadius * 2))
             // // eatRatio >=1代表完全包裹，可吞噬目标，（方形的碰撞盒其实不严谨）
             // if (eatRatio >= 1) {
@@ -182,6 +181,7 @@ export class PlayerCtrl extends Component {
 
                 } else {
                     player_ctrl.EatTarget(this.node,this);//对方调用被吃掉的逻辑
+                    AudioMgr.inst.playOneShot("eatNpc",1);
                 }
                 
             }
@@ -205,15 +205,15 @@ export class PlayerCtrl extends Component {
          
         setTimeout(() => {
             //调用销毁方法
-            this.DestroyMe(scriptPlayer);
+            this.DestroyMe();
             //调用增加经验的方法
-            scriptPlayer.AddValueAndGrow(this.m_cur_value);
+            scriptPlayer.AddValueAndGrow(this.GetCurPhase() +1);//吞噬我的人增加的经验，值等于我当前等级
         }, 800);
       
     }
 
     //目标销毁
-    public DestroyMe(player:PlayerCtrl)
+    public DestroyMe()
     {    
         this.node.destroy();
     }
