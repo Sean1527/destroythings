@@ -19,7 +19,7 @@ export class WinUI extends Component {
 
     public OnWinBack()
     {
-        GameMain.GetInstance().ChaneMoney(100);//获得100金币
+        // GameMain.GetInstance().ChaneMoney(100);//获得100金币
         GameMain.GetInstance().LoadMain();
     }
 

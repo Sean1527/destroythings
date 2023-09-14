@@ -123,11 +123,11 @@ export class GameMain extends Component {
         return null;
     }
 
-    public ChaneMoney(num:number)
-    {
-        let curM = UserData.GetInstance().m_PlayerData.Currency;
-        let newM = curM + num;
-        UserData.GetInstance().m_PlayerData.Currency = newM;
+    // public ChaneMoney(num:number)
+    // {
+    //     let curM = UserData.GetInstance().m_PlayerData.Currency;
+    //     let newM = curM + num;
+    //     UserData.GetInstance().m_PlayerData.Currency = newM;
         
-    }
+    // }
 }
