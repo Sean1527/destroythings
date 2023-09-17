@@ -1,5 +1,6 @@
 //AudioMgr.ts
-import { Node, AudioSource, AudioClip, resources, director } from 'cc';
+import { Node, AudioSource, AudioClip, resources, director, assert, clamp01 } from 'cc';
+import { UserData } from '../UserData/UserData';
 /**
  * @en
  * this is a sington class for audio play, can be easily called from anywhere in you project.
@@ -112,5 +113,29 @@ export class AudioMgr {
      */
     resume(){
         this._audioSource.play();
+    }
+
+
+    ////////////////////////////////以下用于在设置界面控制音量和震动开关的逻辑———————————————————————？还有问题
+    setMusicVolume (flag: number) {
+        const audioSource = this._audioSource!;
+        assert(audioSource, 'AudioManager not inited!');
+
+        flag = clamp01(flag);
+        audioSource.volume = flag;
+    }
+
+
+    openMusic () {
+        this.setMusicVolume(1);
+        // configuration.instance.setGlobalData('sound', 'true');
+        UserData.GetInstance().SetData('IsSoundOpen', 'false');
+    }
+
+    closeMusic () {
+        this.setMusicVolume(0);
+        // configuration.instance.setGlobalData('sound', 'false');
+        UserData.GetInstance().SetData('IsSoundOpen', 'false');
+
     }
 }

@@ -2,12 +2,16 @@ import { _decorator, Component, Label, Node } from 'cc';
 import { GameMain } from '../../GameMain';
 import { ttPlatform } from '../../Platform/ttPlatform';
 import { UserData } from '../../UserData/UserData';
+import { uiManager } from '../../framework/uiManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainMenuUI')
 export class MainMenuUI extends Component {
     @property(Label)
     curMoney: Label = null;
+
+    @property(Node)
+    nd_buySkill: Node = null;
 
     onEnable () {
         //this.node.on(Node.EventType.TOUCH_END, this.OnStartGame, this);
@@ -22,6 +26,11 @@ export class MainMenuUI extends Component {
     }
 
 
+
+    public OnClickStart()
+    {
+        this.nd_buySkill.active = true;
+    }
 
     public OnStartGame()
     {
@@ -43,7 +52,11 @@ export class MainMenuUI extends Component {
         ttPlatform.ShowVideoAD(ttPlatform.AD_VIDEO_TYPE.AD_VIDEO_TYPE_SKILL_3);
     }
 
-
+    onBtnSettingClick () {
+        //设置按钮
+        uiManager.instance.showDialog('main/setting');
+    }
+    
     update(deltaTime: number) {
         
     }

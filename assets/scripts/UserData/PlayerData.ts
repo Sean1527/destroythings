@@ -17,5 +17,7 @@ export class PlayerData
     public Quests = [];
     public Currency:number;
     public StatusEffects = [];
+    public IsSoundOpen:boolean = true;
+    public IsVibrateOpen:boolean = true;
 }
 
